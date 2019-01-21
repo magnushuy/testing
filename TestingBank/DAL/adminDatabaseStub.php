@@ -64,7 +64,7 @@
     
     //Funksjon som sjekker om kunden er slettet.
     function slettKunde($personnummer){
-        if($kunde->personnummer == -1){
+        if($personnummer == -1){
             return "Feil";
         }
         return "OK";
@@ -123,12 +123,12 @@
             return "OK";
         }
     }
-<<<<<<< HEAD
+
  }    
      
-=======
- }   
+
+  
     
 
->>>>>>> 1d334a11b9fa154bd0f8ba4b8a025ff870b81209
+
 ?>

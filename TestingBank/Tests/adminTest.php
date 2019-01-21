@@ -82,6 +82,26 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $this->assertEquals("Feil", $Feil);
     }
     
+    function test_slettKunde_OK() {
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $personnummer = 1;
+        //Act
+        $OK = $adminLogikk->slettKunde($personnummer);
+        //Assert
+        $this->assertEquals("OK",$OK);
+    }
+    
+    function test_slettKunde_Feil() {
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $personnummer = -1;
+        //Act
+        $OK = $adminLogikk->slettKunde($personnummer);
+        //Assert
+        $this->assertEquals("Feil",$OK);
+    }
+    
     
     
 }
