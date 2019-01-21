@@ -86,5 +86,25 @@
                 $dato +=(60*60*24); // en dag i tillegg i sekunder
             }
             return $konto;
+        } 
+        
+        function hentKonti($personnummer){
+            $alleKonto = array();
+            $konti = array();
+            $konto = new konto();
+            $konto->personnummer = 111;
+            $alleKonto[] = $konto;
+            $konto2 = new konto();
+            $konto2->personnummer = 123;
+            $alleKonto[] = $konto2;
+            $konto3 = new konto();
+            $konto3->personnummer = 111;
+            $alleKonto[] = $konto3;
+            for($i = 0; $i < count($alleKonto); $i++){
+                if($alleKonto[$i]->personnummer == $personnummer){
+                    $konti[] = $alleKonto[$i];
+                }
+            }
+            return $konti;
         }
     }
