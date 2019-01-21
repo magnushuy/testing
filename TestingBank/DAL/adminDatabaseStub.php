@@ -82,7 +82,7 @@
         $konti[] = $konto1;
         $konto2 = new konto();
         $konto2->kontonummer = 12987654321;
-        $konto2->personnummer = 01987654321;
+        $konto2->personnummer = 31987654321;
         $konto2->saldo = 1000;
         $konto2->type = "Sparekonto";
         $konto2->valuta = "NOK";
@@ -123,6 +123,12 @@
             return "OK";
         }
     }
+<<<<<<< HEAD
  }    
      
+=======
+ }   
+    
+
+>>>>>>> 1d334a11b9fa154bd0f8ba4b8a025ff870b81209
 ?>
