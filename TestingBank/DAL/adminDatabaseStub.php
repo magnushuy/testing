@@ -70,10 +70,6 @@
         return "OK";
     }
     
-<<<<<<< HEAD
-     
-       
-=======
     function hentAlleKonti(){
         $konti = array();
         $konto1 = new konto();
@@ -126,10 +122,6 @@
             return "OK";
         }
     }
-     
-     
-     
->>>>>>> 30d00fdc1d4b3ee196f9eb5a20a78aada1202c6e
  }   
     
 
