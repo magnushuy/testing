@@ -72,28 +72,30 @@
       
     
     function hentAlleKonti(){
-        $konti = array();
+        $alleKonti = array();
         $konto1 = new konto();
-        $konto1->kontonummer = 123456789012;
-        $konto1->personnummer = 12345678901;
-        $konto1->saldo = 10;
+        $konto1->kontonummer = "123456789012";
+        $konto1->personnummer = "12345678901";
+        $konto1->saldo = "10";
         $konto1->type = "Lønnskonto";
         $konto1->valuta = "NOK";
-        $konti[] = $konto1;
+        $alleKonti[] = $konto1;
         $konto2 = new konto();
-        $konto2->kontonummer = 12987654321;
-        $konto2->personnummer = 31987654321;
-        $konto2->saldo = 1000;
+        $konto2->kontonummer = "12987654321";
+        $konto2->personnummer = "31987654321";
+        $konto2->saldo = "1000";
         $konto2->type = "Sparekonto";
         $konto2->valuta = "NOK";
-        $konti[] = $konto2;
+        $alleKonti[] = $konto2;
         $konto3 = new konto();
-        $konto3->kontonummer = 22987654321;
-        $konto3->personnummer = 11987654321;
-        $konto3->saldo = 100000;
+        $konto3->kontonummer = "22987654321";
+        $konto3->personnummer = "11987654321";
+        $konto3->saldo = "100000";
         $konto3->type = "Sparekonto";
         $konto3->valuta = "NOK";
-        $konti[] = $konto3;
+        $alleKonti[] = $konto3;
+        
+        return $alleKonti;
         
     }
     
@@ -107,16 +109,16 @@
     }
     
     function endreKonto($konto){
-        if($konto->kontonummer == -1){
-            return "Feil";
+        if($konto->kontonummer == 12345 && $konto->personnummer == 54321){
+            return "OK";
         }
         else{
-            return "OK";
+            return "Feil";
         }
     }
     
     function slettKonto($kontonummer){
-        if($konto->kontonummer == -1){
+        if($kontonummer == -1){
             return "Feil";
         }
         else{
@@ -125,6 +127,7 @@
     }
 
  }    
+
      
 
   
@@ -132,3 +135,6 @@
 
 
 ?>
+
+    
+
