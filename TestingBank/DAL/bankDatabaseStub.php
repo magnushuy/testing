@@ -110,6 +110,7 @@
             }
             return $konti;
         }
+
         
         function hentSaldi($personnummer) {
             $saldi = array();
@@ -125,6 +126,15 @@
 
                 $saldi[] = $saldi1;
                 return $saldi;
+
+        //Funksjonen sjekker om personnumemer og passord stemmer
+        function sjekkLoggInn($personnumer, $passord){
+            if($personnumer == "21107698233" && $passord == "Petter1212"){
+                return "OK";
+            }
+            else {
+                return "Feil";
+
             }
         }
     }
