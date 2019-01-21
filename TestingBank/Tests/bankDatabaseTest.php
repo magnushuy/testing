@@ -7,7 +7,10 @@ class bankDatabaseTest extends PHPunit\Framework\Testcase{
     function test_hentKonti(){
         $bankLogikk = new Bank(new BankDBStub());
         $personnummer = 111;
-        $result = count($bankLogikk->hentKonti($personnummer));
-        $this->assertEquals(2,$result);
-    }
+        $result = $bankLogikk->hentKonti($personnummer);
+        $this->assertEquals(2,count($result)); //Tester antall kontoer returnert
+        $this->assertEquals(13131313,$result[0]);
+        $this->assertEquals(14141414,$result[1]);
+        
+    }   
 }
