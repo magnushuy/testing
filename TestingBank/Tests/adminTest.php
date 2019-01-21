@@ -96,7 +96,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
     }
     
     //Funksjon som gir feilmelding når man tester om å registrere kunde informasjon.
-    function test_registerKunde_DB_Feil()
+    function test_registerKunde_Feil()
     {
         // arrange
         $adminLogikk=new Admin(new adminDatabaseStub());
@@ -213,5 +213,4 @@ class adminTest extends PHPUnit\Framework\TestCase{
   
 }
 
-
-?>
+}
