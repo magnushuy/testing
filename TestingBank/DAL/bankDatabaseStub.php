@@ -110,4 +110,21 @@
             }
             return $konti;
         }
+        
+        function hentSaldi($personnummer) {
+            $saldi = array();
+            if($personnummer == -1){
+                return $saldi;
+            }
+            else {
+                $saldi1 = new konto;
+                $saldi1->kontonummer= 105010123456;
+                $saldi1->type="Lonnskonto";
+                $saldi1->saldo = 720;
+                $saldi1->valuta="NOK";
+
+                $saldi[] = $saldi1;
+                return $saldi;
+            }
+        }
     }
