@@ -106,6 +106,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $OK= $adminLogikk->registrerKunde($kunde);
         // assert
         $this->assertEquals("Feil",$OK); 
+    }
 
     function test_registerKonto_OK(){
         //Arrange
@@ -211,6 +212,4 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $this->assertEquals("NOK",$konto[2]->valuta);     
     }
   
-}
-
 }
