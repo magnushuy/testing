@@ -83,6 +83,11 @@ class adminTest extends PHPUnit\Framework\TestCase{
     }
     
     
+    function test_hentAlleKonti(){
+        
+    }
+    
+    
     
 }
 
