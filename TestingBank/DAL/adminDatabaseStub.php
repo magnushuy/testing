@@ -69,6 +69,7 @@
         }
         return "OK";
     }
+      
     
     function hentAlleKonti(){
         $konti = array();
@@ -122,7 +123,12 @@
             return "OK";
         }
     }
+<<<<<<< HEAD
+ }    
+     
+=======
  }   
     
 
+>>>>>>> 1d334a11b9fa154bd0f8ba4b8a025ff870b81209
 ?>
