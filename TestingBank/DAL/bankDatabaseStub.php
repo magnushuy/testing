@@ -86,6 +86,29 @@
                 $dato +=(60*60*24); // en dag i tillegg i sekunder
             }
             return $konto;
+        } 
+        
+        function hentKonti($personnummer){
+            $alleKonto = array();
+            $konti = array();
+            $konto = new konto();
+            $konto->personnummer = 111;
+            $konto->kontonummer = 13131313;
+            $alleKonto[] = $konto;
+            $konto2 = new konto();
+            $konto2->personnummer = 123;
+            $konto2->kontonummer = 12121212;
+            $alleKonto[] = $konto2;
+            $konto3 = new konto();
+            $konto3->personnummer = 111;
+            $konto3->kontonummer = 14141414;
+            $alleKonto[] = $konto3;
+            for($i = 0; $i < count($alleKonto); $i++){
+                if($alleKonto[$i]->personnummer == $personnummer){
+                    $konti[] = $alleKonto[$i]->kontonummer;
+                }
+            }
+            return $konti;
         }
         //Funksjonen sjekker om personnumemer og passord stemmer
         function sjekkLoggInn($personnumer, $passord){
