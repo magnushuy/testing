@@ -70,8 +70,66 @@
         return "OK";
     }
     
+<<<<<<< HEAD
      
        
+=======
+    function hentAlleKonti(){
+        $konti = array();
+        $konto1 = new konto();
+        $konto1->kontonummer = 123456789012;
+        $konto1->personnummer = 12345678901;
+        $konto1->saldo = 10;
+        $konto1->type = "Lønnskonto";
+        $konto1->valuta = "NOK";
+        $konti[] = $konto1;
+        $konto2 = new konto();
+        $konto2->kontonummer = 12987654321;
+        $konto2->personnummer = 01987654321;
+        $konto2->saldo = 1000;
+        $konto2->type = "Sparekonto";
+        $konto2->valuta = "NOK";
+        $konti[] = $konto2;
+        $konto3 = new konto();
+        $konto3->kontonummer = 22987654321;
+        $konto3->personnummer = 11987654321;
+        $konto3->saldo = 100000;
+        $konto3->type = "Sparekonto";
+        $konto3->valuta = "NOK";
+        $konti[] = $konto3;
+        
+    }
+    
+    function registerKonto($konto){
+        if($konto->kontonummer == -1){
+            return "Feil";
+        }
+        else{
+            return "OK";
+        }
+    }
+    
+    function endreKonto($konto){
+        if($konto->kontonummer == -1){
+            return "Feil";
+        }
+        else{
+            return "OK";
+        }
+    }
+    
+    function slettKonto($kontonummer){
+        if($konto->kontonummer == -1){
+            return "Feil";
+        }
+        else{
+            return "OK";
+        }
+    }
+     
+     
+     
+>>>>>>> 30d00fdc1d4b3ee196f9eb5a20a78aada1202c6e
  }   
     
 
