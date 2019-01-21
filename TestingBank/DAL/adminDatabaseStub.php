@@ -46,7 +46,7 @@
      
     //Funksjon som endrer informasjoner til kundene.
     function endreKundeInfo($kunde){
-        if($kunde->postnr =="1" && $kunde->poststed == "1"){
+        if($kunde->postnr =="0580" && $kunde->poststed == "Asker"){
             return "OK";
         }
          return "Feil";
@@ -106,16 +106,16 @@
     }
     
     function endreKonto($konto){
-        if($konto->kontonummer == -1){
-            return "Feil";
+        if($konto->kontonummer == 12345 && $konto->personnummer == 54321){
+            return "OK";
         }
         else{
-            return "OK";
+            return "Feil";
         }
     }
     
     function slettKonto($kontonummer){
-        if($konto->kontonummer == -1){
+        if($kontonummer == -1){
             return "Feil";
         }
         else{

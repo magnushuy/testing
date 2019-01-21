@@ -44,7 +44,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
     }
     
     //Funksjon som gir godkjentmelding når man tester om å endre kunde informasjon.
-    function test_endreKontoInfo_OK(){
+    function test_endreKundeInfo_OK(){
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
         $kunde = new kunde();
@@ -64,7 +64,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
     
     
     //Funksjon som gir feilmelding når man tester om å endre kunde informasjon. 
-    function test_endreKontoInfo_Feil(){
+    function test_endreKundeInfo_Feil(){
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
         $kunde = new kunde();
@@ -80,6 +80,77 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $Feil = $adminLogikk->endreKundeInfo($kunde);
         //Assert
         $this->assertEquals("Feil", $Feil);
+    }
+    
+    function test_registerKonto_OK(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
+        $konto->kontonummer = 1;
+        //Act
+        $OK = $adminLogikk->registrerKonto($konto);
+        //Assert
+        $this->assertEquals("OK", $OK);
+        
+    }
+    
+    function test_registerKonto_Feil(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
+        $konto->kontonummer = -1;
+        //Act
+        $Feil = $adminLogikk->registrerKonto($konto);
+        //Assert
+        $this->assertEquals("Feil", $Feil);
+        
+    }
+    
+    function test_endreKonto_Feil(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
+        $konto->kontonummer = -1;
+        $konto->personnummer = -1;
+        //Act
+        $Feil = $adminLogikk->endreKonto($konto);
+        //Assert
+        $this->assertEquals("Feil", $Feil);
+        
+    }
+    
+    function test_endreKonto_OK(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
+        $konto->kontonummer = 12345;
+        $konto->personnummer = 54321;
+        //Act
+        $Ok = $adminLogikk->endreKonto($konto);
+        //Assert
+        $this->assertEquals("OK", $Ok);
+    }
+    
+    function test_slettKonto_Feil(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
+        $konto->kontonummer = -1;
+        //Act
+        $result = $adminLogikk->slettKonto($konto->kontonummer);
+        //Assert
+        $this->assertEquals("Feil", $result);
+    }
+    
+    function test_slettKonto_OK(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
+        $konto->kontonummer = 41231;
+        //Act
+        $result = $adminLogikk->slettKonto($konto->kontonummer);
+        //Assert
+        $this->assertEquals("OK", $result);
     }
     
     
