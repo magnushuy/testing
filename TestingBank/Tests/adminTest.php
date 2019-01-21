@@ -7,10 +7,13 @@ class adminTest extends PHPUnit\Framework\TestCase{
     
     //Funksjon som tester alle kundene som er registrert.
     function test_hentAlleKunder(){
+        //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
+        //Act
         $kunde = $adminLogikk->hentAlleKunder();
         
         //Tester første kunden
+        //Assert
         $this->assertEquals("21107698233", $kunde[0]->personnummer);
         $this->assertEquals("Petter", $kunde[0]->fornavn);
         $this->assertEquals("Hansen", $kunde[0]->etternavn);
@@ -39,6 +42,46 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $this->assertEquals("densterkethomas", $kunde[2]->passord);
         
     }
+    
+    //Funksjon som gir godkjentmelding når man tester om å endre kunde informasjon.
+    function test_endreKontoInfo_OK(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $kunde = new kunde();
+        $kunde->personnummer = "21107698233";
+        $kunde->fornavn = "Petter";
+        $kunde->etternavn = "Hansen";
+        $kunde->adresse = "Torgveien 19";
+        $kunde->postnr = "0580"; //Legger inn riktig postnr som i adminDatabaseStuben.
+        $kunde->poststed = "Asker"; //Legger inn riktig poststed som i adminDatabaseStuben.
+        $kunde->telefonnr = "47651298";
+        $kunde->passord = "Petter1212";
+        //Act
+        $OK = $adminLogikk->endreKundeInfo($kunde);
+        //Assert
+        $this->assertEquals("OK", $OK);   
+    }
+    
+    
+    //Funksjon som gir feilmelding når man tester om å endre kunde informasjon. 
+    function test_endreKontoInfo_Feil(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $kunde = new kunde();
+        $kunde->personnummer = "21107698233";
+        $kunde->fornavn = "Petter";
+        $kunde->etternavn = "Hansen";
+        $kunde->adresse = "Torgveien 19";
+        $kunde->postnr = "0927";  //Legger inn annet postnr enn det i adminDatabaseStub
+        $kunde->poststed = "Trondheim"; //Legger inn annet poststed enn det i adminDatabaseStub
+        $kunde->telefonnr = "47651298";
+        $kunde->passord = "Petter1212";
+        //Act
+        $Feil = $adminLogikk->endreKundeInfo($kunde);
+        //Assert
+        $this->assertEquals("Feil", $Feil);
+    }
+    
     
     
 }
