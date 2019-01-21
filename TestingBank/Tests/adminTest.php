@@ -82,6 +82,30 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $this->assertEquals("Feil", $Feil);
     }
     
+    //Funksjon som gir godkjentmelding når man tester om å registrere kunde informasjon.
+    function test_registrerKunde_OK(){
+        //arrange 
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $kunde = new kunde();
+        $kunde-> personnummer = 1;
+        // act
+        $OK = $adminLogikk->registrerKunde($kunde);
+        // assert
+        $this->assertEquals("OK",$OK); 
+    }
+    
+    //Funksjon som gir feilmelding når man tester om å registrere kunde informasjon.
+    function test_registerKunde_DB_Feil()
+    {
+        // arrange
+        $adminLogikk=new Admin(new adminDatabaseStub());
+        $kunde = new kunde();
+        $kunde->personnummer = -1;
+        // act
+        $OK= $adminLogikk->registrerKunde($kunde);
+        // assert
+        $this->assertEquals("Feil",$OK); 
+    }
     
     
 }
