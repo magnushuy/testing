@@ -16,8 +16,7 @@
         //Assert
         $this->assertEquals("OK", $OK);
         $this->assertEquals("Feil", $Feil);
-
-    }
+        }
     
     //Funksjonen som gir godkjentmelding når man tester hentBetalinger
     function test_hentBetalinger_OK(){
@@ -62,4 +61,38 @@
         //Assert
         $this->assertEquals("Feil", $result);
     }
+    
+    function test_registrerBetaling_OK(){
+        //Arrange
+        $banklogikk = new Bank(new BankDBStub());
+        $transaksjon = new transaksjon();
+        $konto = new konto();
+        $konto->kontonummer = 111;
+        $transaksjon->fraTilKontonummer = 123;
+        $transaksjon->belop = 500;
+        $transaksjon->dato = "0101";
+        $transaksjon->melding = "hei";
+        //Act
+        $result = $banklogikk->registrerBetaling($konto->kontonummer, $transaksjon);
+        //Assert
+        $this->assertEquals("OK", $result); //Forventer OK
+
     }
+    
+    function test_registrerBetaling_Feil(){
+        //Arrange
+        $banklogikk = new Bank(new BankDBStub());
+        $transaksjon = new transaksjon();
+        $konto = new konto();
+        $konto->kontonummer = 1111;
+        $transaksjon->fraTilKontonummer = 123;
+        $transaksjon->belop = 50;
+        $transaksjon->dato = "0101";
+        $transaksjon->melding = "hei";
+        //Act
+        $result = $banklogikk->registrerBetaling($konto->kontonummer, $transaksjon);
+        //Assert
+        $this->assertEquals("Feil", $result); //Forventer OK
+
+    }
+}
