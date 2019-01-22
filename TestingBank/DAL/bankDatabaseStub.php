@@ -154,22 +154,14 @@
             }
             else return "Feil";
         }
-
         
-        function utforBetaling($TxID) {
-            if($TxID == 1) {
+        function utforBetaling($TxID){
+            $transaksjon = new transaksjon();
+            if($TxID == 1001){
                 return "OK";
             }
-            else {
-                return "Feil";
-            }
-            
-            $ok = $this->db->utforBetaling($TxID);
-            return $ok;
+            return "Feil";
         }
-
-
-
     }
     
     

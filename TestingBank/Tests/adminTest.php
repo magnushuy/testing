@@ -155,6 +155,10 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $adminLogikk = new Admin(new adminDatabaseStub());
         $konto = new konto();
         $konto->kontonummer = 1;
+        $konto->personnummer = "12345678901";
+        $konto->saldo = "10";
+        $konto->type = "Lønnskonto";
+        $konto->valuta = "NOK";
         //Act
         $result = $adminLogikk->registrerKonto($konto);
         //Assert
@@ -166,6 +170,10 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $adminLogikk = new Admin(new adminDatabaseStub());
         $konto = new konto();
         $konto->kontonummer = -1;
+        $konto->personnummer = "12345678901";
+        $konto->saldo = "10";
+        $konto->type = "Lønnskonto";
+        $konto->valuta = "NOK";
         //Act
         $result = $adminLogikk->registrerKonto($konto);
         //Assert
@@ -216,17 +224,21 @@ class adminTest extends PHPUnit\Framework\TestCase{
         //Act
         $result = $adminLogikk->slettKonto($konto->kontonummer);
         //Assert
-        $this->assertEquals("OK", $result);
-        
+        $this->assertEquals("OK", $result);       
+    }
+    
+    function test_slettKonto_Feil() {
         //Forandrer verdier slik at testen blir feil
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
         $konto->kontonummer = -1;
         //Act
         $result = $adminLogikk->slettKonto($konto->kontonummer);
         //Assert
         $this->assertEquals("Feil", $result);
     }
-    
-    
+
+
     //Funksjon som tester om alle kontoene.
     function test_hentAlleKonti(){
         //Arrange
