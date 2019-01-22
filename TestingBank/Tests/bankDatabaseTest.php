@@ -49,5 +49,29 @@ class bankDatabaseTest extends PHPunit\Framework\Testcase{
         //Assert
         $this->assertEquals("OK", $OK);
         $this->assertEquals("Feil", $Feil);
-    } 
+    }
+    
+    //Funksjonen som gir godkjentmelding når man tester hentBetalinger
+    function test_hentBetalinger_OK(){
+        $Bank = new Bank(new BankDBStub());
+        $konto = new konto;
+        $konto->personnumer="12525232142";
+        $personnummer=$konto->personnumer;
+        $hentBetalinger = $Bank->hentBetalinger($personnummer);
+        $this->assertEquals("20102012345-105010123456",$hentBetalinger[0]->fraTilKontonummer);
+        $this->assertEquals("100.5",$hentBetalinger[0]->transaksjonBelop);
+        $this->assertEquals("200", $hentBetalinger[0]->belop);
+        $this->assertEquals("150315",$hentBetalinger[0]->dato);
+        $this->assertEquals("1", $hentBetalinger[0]->avventer);
+    }
+    
+    //Funksjonen som gir feilmelding når man tester hentBetalinger
+    function test_hentBetalinger_Feil() {
+        $Bank = new Bank(new BankDBStub());
+        $konto = new konto;
+        $konto->personnummer = "-1";
+        $personnummer=$konto->personnummer;
+        $hentBetalinger = $Bank->hentBetalinger($personnummer);
+        $this->assertEquals(array(), $hentBetalinger);
+    }
 }
