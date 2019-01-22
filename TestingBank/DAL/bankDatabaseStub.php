@@ -154,6 +154,18 @@
             }
             else return "Feil";
         }
+        
+        function utforBetaling($TxID) {
+            if($TxID == 1) {
+                return "OK";
+            }
+            else {
+                return "Feil";
+            }
+            
+            $ok = $this->db->utforBetaling($TxID);
+            return $ok;
+        }
     }
     
     

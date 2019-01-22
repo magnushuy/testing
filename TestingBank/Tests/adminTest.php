@@ -72,7 +72,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
     
     
 
-    function test_slettKunde() {
+    function test_slettKunde_OK() {
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
         $personnummer = 1;
@@ -80,8 +80,12 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $result = $adminLogikk->slettKunde($personnummer);
         //Assert
         $this->assertEquals("OK",$result);
-        
+               
+    }
+    
+    function test_slettKunde_Feil() {
         //Forandrer verdier slik at testen blir feil
+        $adminLogikk = new Admin(new adminDatabaseStub());
         $personnummer = -1;
         //Act
         $result = $adminLogikk->slettKunde($personnummer);
@@ -119,15 +123,18 @@ class adminTest extends PHPUnit\Framework\TestCase{
         //Act
         $result = $adminLogikk->registrerKonto($konto);
         //Assert
-        $this->assertEquals("OK", $result);
-        
+        $this->assertEquals("OK", $result);           
+    }
+    
+    function test_registerKonto_Feil() {
         //Forandrer verdier slik at testen blir feil
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
         $konto->kontonummer = -1;
         //Act
         $result = $adminLogikk->registrerKonto($konto);
         //Assert
         $this->assertEquals("Feil", $result);
-        
     }
     
 
