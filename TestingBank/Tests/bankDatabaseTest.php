@@ -132,5 +132,52 @@
         $this->assertEquals("Feil", $Feil);   
     }   
     
-   
+    function test_hentSaldi_OK(){
+        //Arrange
+        $bankLogikk = new Bank(new BankDBStub());
+        $personnummer = 1234567890;
+        
+        //Act
+        $result = $bankLogikk->hentSaldi($personnummer);
+        
+        //Assert
+        $this->assertEquals("OK",$result);
+    }
+    
+    function test_hentSaldi_Feil(){
+        //Arrange
+        $bankLogikk = new Bank(new BankDBStub());
+        $personnummer = 12345678901;
+        
+        //Act
+        $result = $bankLogikk->hentSaldi($personnummer);
+        
+        //Assert
+        $this->assertEquals("Feil",$result);
+    }
+    
+    function test_hentKonti_OK(){
+        //Arrange
+        $bankLogikk = new Bank(new BankDBStub());
+        $personnummer = 1234567890;
+        
+        //Act
+        $result = $bankLogikk->hentKonti($personnummer);
+        
+        //Assert
+        $this->assertEquals("OK",$result);
+    }
+    
+    function test_hentKonti_Feil(){
+        //Arrange
+        $bankLogikk = new Bank(new BankDBStub());
+        $personnummer = 12345678901;
+        
+        //Act
+        $result = $bankLogikk->hentKonti($personnummer);
+        
+        //Assert
+        $this->assertEquals("Feil",$result);
+    }
+    
 }
