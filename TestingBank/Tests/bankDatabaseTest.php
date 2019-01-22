@@ -29,20 +29,17 @@ class bankDatabaseTest extends PHPunit\Framework\Testcase{
         $transaksjon->belop = 501; //Forandrer på verdi for å få feil i test
         $result = $bankLogikk->registrerBetaling($kontoNr, $transaksjon);
         $this->assertEquals("Feil", $result); //Forventer OK
-        
-<<<<<<< HEAD
-        function endreKundeInfo($kunde){
-            if($kunde->postnr = "0580" && $kunde->poststed = ""){
-                return "OK";
-            }
-            return "Feil";
+    }
+    
+    function endreKundeInfo($kunde){
+        if($kunde->postnr = "0580" && $kunde->poststed = ""){
+            return "OK";
         }
+        return "Feil";
+    }
 
     
-=======
-    }
-        
->>>>>>> parent of 52429df... Merge branch 'magnus' of https://github.com/magnushuy/testing into magnus
+
     
     //Funksjonen som gir godkjentmelding eller feilmelding når man tester 
     //om personnumemer og passord stemmer
@@ -80,10 +77,4 @@ class bankDatabaseTest extends PHPunit\Framework\Testcase{
         //Assert
         $this->assertEquals("Feil", $result);
     }
-<<<<<<< HEAD
-    
-    
 }
-=======
-}
->>>>>>> parent of 52429df... Merge branch 'magnus' of https://github.com/magnushuy/testing into magnus
