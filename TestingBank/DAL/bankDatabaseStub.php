@@ -154,6 +154,7 @@
             }
             else return "Feil";
         }
+
         
         function utforBetaling($TxID) {
             if($TxID == 1) {
@@ -166,6 +167,9 @@
             $ok = $this->db->utforBetaling($TxID);
             return $ok;
         }
+
+
+
     }
     
     
