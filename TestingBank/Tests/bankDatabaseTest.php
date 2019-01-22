@@ -4,18 +4,51 @@
     include_once '../BLL/bankLogikk.php';
     class bankDatabaseTest extends PHPUnit\Framework\TestCase{
         function test_sjekkLoggInn_OK() {
-        //Arrange
-        $bankLogikk = new Bank(new BankDBStub());
-        $kunde = new kunde();
-        $kunde->personnummer = "21107698233";
-        $kunde->passord = "Petter1212";
-        $kunde->passordFeil = "Petter121200";
-        //Act
-        $OK = $bankLogikk->sjekkLoggInn($kunde->personnummer, $kunde->passord);
-        $Feil = $bankLogikk->sjekkLoggInn($kunde->personnummer, $kunde->passordFeil);
-        //Assert
-        $this->assertEquals("OK", $OK);
-        $this->assertEquals("Feil", $Feil);
+            //Arrange
+            $bankLogikk = new Bank(new BankDBStub());
+            $kunde = new kunde();
+            $kunde->personnummer = "21107698233";
+            $kunde->passord = "Petter1212";
+            //Act
+            $OK = $bankLogikk->sjekkLoggInn($kunde->personnummer, $kunde->passord);
+            //Assert
+            $this->assertEquals("OK", $OK);
+        }
+        
+        function test_sjekkLoggInn_Feil(){
+            //Arrange
+            $bankLogikk = new Bank(new BankDBStub());
+            $kunde = new kunde();
+            $kunde->personnummer = "211076982331";
+            $kunde->passord = "Petter12121";
+            //Act
+            $Feil = $bankLogikk->sjekkLoggInn($kunde->personnummer, $kunde->passord);
+            //Assert
+            $this->assertEquals("Feil", $Feil);
+        }
+        
+        function test_sjekkLoggInn_FeilPassord(){
+            //Arrange
+            $bankLogikk = new Bank(new BankDBStub());
+            $kunde = new kunde();
+            $kunde->personnummer = "21107698233";
+            $kunde->passord = "P";
+            //Act
+            $FeilPass = $bankLogikk->sjekkLoggInn($kunde->personnummer, $kunde->passord);
+            //Assert
+            $this->assertEquals("Feil i passord", $FeilPass);
+        }
+        
+        function test_sjekkLoggInn_FeilPersonNr(){
+            //Arrange
+            $bankLogikk = new Bank(new BankDBStub());
+            $kunde = new kunde();
+            $kunde->personnummer = "abcdefg";
+            $kunde->passord = "Petter1212";
+            //Act
+            $FeilPersonNr = $bankLogikk->sjekkLoggInn($kunde->personnummer, $kunde->passord);
+            //Assert
+            $this->assertEquals("Feil i personnummer", $FeilPersonNr);
         }
     
     //Funksjonen som gir godkjentmelding når man tester hentBetalinger
