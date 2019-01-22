@@ -162,11 +162,15 @@ class adminTest extends PHPUnit\Framework\TestCase{
         //Act
         $result = $adminLogikk->registrerKonto($konto);
         //Assert
+
+
+
         $this->assertEquals("OK", $result);           
     }
 
     //Funksjon som gir feilmelding når man tester om å registrere konto.    
     function test_registerKonto_Feil() {
+
         //Forandrer verdier slik at testen blir feil
         $adminLogikk = new Admin(new adminDatabaseStub());
         $konto = new konto();

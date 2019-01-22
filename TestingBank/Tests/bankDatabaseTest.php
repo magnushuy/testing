@@ -142,7 +142,6 @@
         }
 
     
-        
 
         
         function registrerBetaling($kontoNr, $transaksjon){
@@ -165,6 +164,23 @@
 
     
     
+
+        $transaksjon->belop = 501; 
+        //Forandrer på verdi for å få feil i test
+        $result = $bankLogikk->registrerBetaling($kontoNr, $transaksjon);
+        $this->assertEquals("Feil", $result); //Forventer OK
+    }
+    
+    function endreKundeInfo($kunde){
+        if($kunde->postnr = "0580" && $kunde->poststed = ""){
+            return "OK";
+        }
+        return "Feil";
+    }
+
+    
+
+
     
     //Funksjonen som gir godkjentmelding eller feilmelding når man tester 
     //om personnumemer og passord stemmer
@@ -181,6 +197,7 @@
         //Assert
         $this->assertEquals("OK", $OK);
         $this->assertEquals("Feil", $Feil);
+
     }
     
     //Funksjonen som gir godkjentmelding når man tester hentBetalinger
@@ -209,7 +226,9 @@
 
 
      
-    
+
+    } 
+
     function test_utforBetaling_OK(){
         //Arrange
         $bankLogikk = new Bank(new BankDBStub());
@@ -229,6 +248,9 @@
         //Assert
         $this->assertEquals("Feil", $result);
     }
+
     
     }
 
+
+}
