@@ -155,6 +155,25 @@
             else return "Feil";
         }
         
+        function hentBetalinger($personnummer) {
+            $betalinger = array();
+            if ($personnummer ==-1){
+                return $betalinger;
+            }
+            else {
+                $betaling1 = new transaksjon();
+                $betaling1->fraTilKontonummer="20102012345-105010123456";
+                $betaling1->transaksjonBelop="100.5";
+                $betaling1->belop="200";
+                $betaling1->dato="150315";
+                $betaling1->melding="Meny Storo";
+                $betaling1->avventer="1";
+                $betalinger[]=$betaling1;
+                
+                return $betalinger;               
+            }
+        }
+
         function utforBetaling($TxID){
             $transaksjon = new transaksjon();
             if($TxID == 1001){
@@ -162,9 +181,16 @@
             }
             return "Feil";
         }
-        
-        
+
     }
     
     
+?>
+
+        
+        
+    
+    
+    
+
 
