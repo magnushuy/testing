@@ -165,16 +165,17 @@
             
         }
         
-        function hentKundeInfo($personnummer){
+        function hentKundeInfo($personnummer){          
             $kunde = new kunde();
             if($personnummer == -1 ){
-                return "Feil";
-                
-            }else{
+                return "Feil";                
+            }
+            else {
                 $personnummer = 21097635882;      
                 return $personnummer;
             }
         }
+        
         
 
     }

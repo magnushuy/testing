@@ -213,19 +213,22 @@
         $this->assertEquals("Feil",$result);
     }
     
-        function test_hentKundeInfo_OK(){
-             //Arrange
-            $bankLogikk = new Bank(new bankDBStub());
-            $kunde = new kunde();
-            $kunde->personnummer = 21097635882;
-            $personnummer = $kunde->personnummer;
-            //Act
-            $OK = $bankLogikk->hentKundeInfo($personnummer);
-            //Assert
-            $this->assertEquals("21097635882", $OK->personnummer);
-
-        }        
-    
+    function test_hentKundeInfo_OK(){
+        //Arrange
+        $bankLogikk = new Bank(new bankDBStub());
+        $kunde = new kunde();
+        $personnummer = 21097635882;
+        $kunde->personnummer = $personnummer;
+        $kunde->fornavn = "Petter";
+        $kunde->etternavn = "Hansen";
+        $kunde->adresse = "Torgveien 19";
+        $kunde->postnr = "0580";
+        $kunde->telefonnr = "47651298";
+        //Act
+        $OK = $bankLogikk->hentKundeInfo($personnummer);
+        //Assert
+        $this->assertEquals($personnummer, $OK); 
+    }        
     
     function test_hentKundeInfo_Feil(){
          //Arrange
@@ -236,8 +239,7 @@
         //Act
         $Feil = $bankLogikk->hentKundeInfo($personnummer);
         //Assert
-        $this->assertEquals("Feil", $Feil);
-  
+        $this->assertEquals("Feil", $Feil); 
     }    
     
     
