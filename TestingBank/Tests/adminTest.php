@@ -180,14 +180,27 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $konto = new konto();
         $konto->kontonummer = 12345;
         $konto->personnummer = 54321;
+        $konto->saldo = 100000;
+        $konto->type = "Sparekonto";
+        $konto->valuta = "NOK";
         //Act
         $Ok = $adminLogikk->endreKonto($konto);
         //Assert
         $this->assertEquals("OK", $Ok);
-        
-        //Forandrer verdier slik at testen blir feil
-        $konto->kontonummer = -1;
-        $konto->personnummer = -1;
+       
+    }
+    
+     //Funksjon som gir godkjentmelding når man tester om å endrer konto.    
+    function test_endreKonto_Feil(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
+       
+        $konto->kontonummer = -12345;
+        $konto->personnummer = -54321;
+        $konto->saldo = 100000;
+        $konto->type = "Sparekonto";
+        $konto->valuta = "NOK";
         //Act
         $Feil = $adminLogikk->endreKonto($konto);
         //Assert
