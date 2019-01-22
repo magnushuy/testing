@@ -130,9 +130,6 @@
             }
         }    
 
-                
-            }
-        
 
         //Funksjonen sjekker om personnumemer og passord stemmer              
         function sjekkLoggInn($personnumer, $passord){
@@ -146,7 +143,6 @@
 
     
         
-    }
 
         
         function registrerBetaling($kontoNr, $transaksjon){

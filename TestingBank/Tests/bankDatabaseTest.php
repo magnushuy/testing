@@ -30,7 +30,6 @@ class bankDatabaseTest extends PHPunit\Framework\Testcase{
         $result = $bankLogikk->registrerBetaling($kontoNr, $transaksjon);
         $this->assertEquals("Feil", $result); //Forventer OK
         
-        
     }
         
     
