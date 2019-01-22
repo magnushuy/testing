@@ -37,9 +37,7 @@ class bankDatabaseTest extends PHPunit\Framework\Testcase{
         }
         return "Feil";
     }
-
-    
-
+ 
     
     //Funksjonen som gir godkjentmelding eller feilmelding når man tester 
     //om personnumemer og passord stemmer
