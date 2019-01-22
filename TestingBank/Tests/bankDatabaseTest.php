@@ -62,4 +62,43 @@
         //Assert
         $this->assertEquals("Feil", $result);
     }
+    
+    
+    function test_endreKundeInfo_OK(){
+         //Arrange
+        $adminLogikk = new Bank(new bankDBStub());
+        $kunde = new kunde();
+        $kunde->personnummer = "330943829993";
+        $kunde->fornavn = "Kristian";
+        $kunde->etternavn = "Karlsen";
+        $kunde->adresse = "Kongsving 23";
+        $kunde->postnr = "1812"; //Legger inn riktig postnr som i bankDatabaseStuben.
+        $kunde->poststed = "Spydeberg"; //Legger inn riktig poststed som i bankDatabaseStuben.
+        $kunde->telefonnr = "98762391";
+        $kunde->passord = "KristianErOK";
+        //Act
+        $OK = $adminLogikk->endreKundeInfo($kunde);
+        //Assert
+        $this->assertEquals("OK", $OK);   
     }
+    
+    function test_endreKundeInfo_Feil(){
+         //Arrange
+        $adminLogikk = new Bank(new bankDBStub());
+        $kunde = new kunde();
+        $kunde->personnummer = "330943829993";
+        $kunde->fornavn = "Kristian";
+        $kunde->etternavn = "Karlsen";
+        $kunde->adresse = "Kongsving 23";
+        $kunde->postnr = "1834"; //Legger inn feil postnr som i bankDatabaseStuben.
+        $kunde->poststed = "Spydeberg"; //Legger inn feil poststed som i bankDatabaseStuben.
+        $kunde->telefonnr = "98762391";
+        $kunde->passord = "KristianErOK";
+        //Act
+        $Feil = $adminLogikk->endreKundeInfo($kunde);
+        //Assert
+        $this->assertEquals("Feil", $Feil);   
+    }   
+    
+    
+}
