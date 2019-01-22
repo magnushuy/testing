@@ -46,7 +46,7 @@
      
     //Funksjon som endrer informasjoner til kundene.
     function endreKundeInfo($kunde){
-        if($kunde->postnr =="0580" && $kunde->poststed == "Asker"){
+        if($kunde->postnr == 1){
             return "OK";
         }
          return "Feil";

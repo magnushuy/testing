@@ -52,8 +52,8 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $kunde->fornavn = "Petter";
         $kunde->etternavn = "Hansen";
         $kunde->adresse = "Torgveien 19";
-        $kunde->postnr = "0580"; //Legger inn riktig postnr som i adminDatabaseStuben.
-        $kunde->poststed = "Asker"; //Legger inn riktig poststed som i adminDatabaseStuben.
+        $kunde->postnr = 1; //Legger inn riktig postnr som i adminDatabaseStuben.
+        $kunde->poststed = "Asker"; 
         $kunde->telefonnr = "47651298";
         $kunde->passord = "Petter1212";
         //Act
@@ -72,8 +72,8 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $kunde->fornavn = "Petter";
         $kunde->etternavn = "Hansen";
         $kunde->adresse = "Torgveien 19";
-        $kunde->postnr = "0927";  //Legger inn annet postnr enn det i adminDatabaseStub
-        $kunde->poststed = "Trondheim"; //Legger inn annet poststed enn det i adminDatabaseStub
+        $kunde->postnr = -1;  //Legger inn annet postnr enn det i adminDatabaseStub
+        $kunde->poststed = "Trondheim"; 
         $kunde->telefonnr = "47651298";
         $kunde->passord = "Petter1212";
         //Act
