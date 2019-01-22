@@ -154,6 +154,14 @@
             }
             else return "Feil";
         }
+        
+        function utforBetaling($TxID){
+            $transaksjon = new transaksjon();
+            if($TxID == 1001){
+                return "OK";
+            }
+            return "Feil";
+        }
     }
     
     

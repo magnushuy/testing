@@ -49,4 +49,24 @@ class bankDatabaseTest extends PHPunit\Framework\Testcase{
         $this->assertEquals("OK", $OK);
         $this->assertEquals("Feil", $Feil);
     } 
+    
+    function test_utforBetaling_OK(){
+        //Arrange
+        $bankLogikk = new Bank(new BankDBStub());
+        $TxID = 1001;
+        //Act
+        $result = $bankLogikk->utforBetaling($TxID);
+        //Assert
+        $this->assertEquals("OK", $result);
+    }
+    
+    function test_utforBetaling_Feil(){
+        //Arrange
+        $bankLogikk = new Bank(new BankDBStub());
+        $TxID = 10011;
+        //Act
+        $result = $bankLogikk->utforBetaling($TxID);
+        //Assert
+        $this->assertEquals("Feil", $result);
+    }
 }
