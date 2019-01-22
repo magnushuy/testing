@@ -98,7 +98,7 @@
     
     function test_endreKundeInfo_OK(){
          //Arrange
-        $adminLogikk = new Bank(new bankDBStub());
+        $bankLogikk = new Bank(new bankDBStub());
         $kunde = new kunde();
         $kunde->personnummer = "330943829993";
         $kunde->fornavn = "Kristian";
@@ -109,14 +109,14 @@
         $kunde->telefonnr = "98762391";
         $kunde->passord = "KristianErOK";
         //Act
-        $OK = $adminLogikk->endreKundeInfo($kunde);
+        $OK = $bankLogikk->endreKundeInfo($kunde);
         //Assert
         $this->assertEquals("OK", $OK);   
     }
     
     function test_endreKundeInfo_Feil(){
          //Arrange
-        $adminLogikk = new Bank(new bankDBStub());
+        $bankLogikk = new Bank(new bankDBStub());
         $kunde = new kunde();
         $kunde->personnummer = "330943829993";
         $kunde->fornavn = "Kristian";
@@ -127,7 +127,7 @@
         $kunde->telefonnr = "98762391";
         $kunde->passord = "KristianErOK";
         //Act
-        $Feil = $adminLogikk->endreKundeInfo($kunde);
+        $Feil = $bankLogikk->endreKundeInfo($kunde);
         //Assert
         $this->assertEquals("Feil", $Feil);   
     }   
