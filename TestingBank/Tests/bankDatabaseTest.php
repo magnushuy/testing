@@ -166,4 +166,40 @@
     }
     
     
-
+    //Funksjonen som gir godkjentmelding eller feilmelding når man tester 
+    //om personnumemer og passord stemmer
+    function test_sjekkLoggInn_OK() {
+        //Arrange
+        $bankLogikk = new Bank(new BankDBStub());
+        $kunde = new kunde();
+        $kunde->personnummer = "21107698233";
+        $kunde->passord = "Petter1212";
+        $kunde->passordFeil = "Petter121200";
+        //Act
+        $OK = $bankLogikk->sjekkLoggInn($kunde->personnummer, $kunde->passord);
+        $Feil = $bankLogikk->sjekkLoggInn($kunde->personnummer, $kunde->passordFeil);
+        //Assert
+        $this->assertEquals("OK", $OK);
+        $this->assertEquals("Feil", $Feil);
+    } 
+    
+    function test_utforBetaling_OK(){
+        //Arrange
+        $bankLogikk = new Bank(new BankDBStub());
+        $TxID = 1001;
+        //Act
+        $result = $bankLogikk->utforBetaling($TxID);
+        //Assert
+        $this->assertEquals("OK", $result);
+    }
+    
+    function test_utforBetaling_Feil(){
+        //Arrange
+        $bankLogikk = new Bank(new BankDBStub());
+        $TxID = 10011;
+        //Act
+        $result = $bankLogikk->utforBetaling($TxID);
+        //Assert
+        $this->assertEquals("Feil", $result);
+    }
+}
