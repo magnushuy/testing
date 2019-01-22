@@ -126,9 +126,10 @@
 
                 $saldi[] = $saldi1;
                 return $saldi;
-                
+
             }
-        }
+        }    
+
 
         //Funksjonen sjekker om personnumemer og passord stemmer              
         function sjekkLoggInn($personnumer, $passord){
@@ -139,6 +140,10 @@
                 return "Feil";
             }
         }
+
+    
+        
+
         
         function registrerBetaling($kontoNr, $transaksjon){
             if($transaksjon->fraTilKontonummer == 123 &&
@@ -168,6 +173,15 @@
                 return $betalinger;               
             }
         }
+
+        function utforBetaling($TxID){
+            $transaksjon = new transaksjon();
+            if($TxID == 1001){
+                return "OK";
+            }
+            return "Feil";
+        }
     }
     
     
+?>
