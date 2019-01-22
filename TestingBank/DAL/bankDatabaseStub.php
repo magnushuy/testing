@@ -181,6 +181,16 @@
             }
             return "Feil";
         }
+        
+        
+        //Funksjon som sjekker om endre kunde informasjon
+        function endreKundeInfo($kunde){
+            if($kunde->postnr =="1812" && $kunde->poststed == "Spydeberg"){
+            return "OK";
+        }
+         return "Feil";
+            
+        }
 
     }
     
