@@ -44,7 +44,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
     }
     
     //Funksjon som gir godkjentmelding når man tester om å endre kunde informasjon.
-    function test_endreKundeInfo(){
+    function test_endreKundeInfo_OK(){
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
         $kunde = new kunde();
@@ -57,18 +57,31 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $kunde->telefonnr = "47651298";
         $kunde->passord = "Petter1212";
         //Act
-        $result = $adminLogikk->endreKundeInfo($kunde);
+        $OK = $adminLogikk->endreKundeInfo($kunde);
         //Assert
-        $this->assertEquals("OK", $result);   //Sjekker og forventer "OK"
-        
-        //Forandrer på verdier slik at testen blir feil
+        $this->assertEquals("OK", $OK);   
+    }
+    
+    
+    //Funksjon som gir feilmelding når man tester om å endre kunde informasjon. 
+    function test_endreKundeInfo_Feil(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $kunde = new kunde();
+        $kunde->personnummer = "21107698233";
+        $kunde->fornavn = "Petter";
+        $kunde->etternavn = "Hansen";
+        $kunde->adresse = "Torgveien 19";
         $kunde->postnr = "0927";  //Legger inn annet postnr enn det i adminDatabaseStub
         $kunde->poststed = "Trondheim"; //Legger inn annet poststed enn det i adminDatabaseStub
+        $kunde->telefonnr = "47651298";
+        $kunde->passord = "Petter1212";
         //Act
-        $result = $adminLogikk->endreKundeInfo($kunde);
+        $Feil = $adminLogikk->endreKundeInfo($kunde);
         //Assert
-        $this->assertEquals("Feil", $result); //Sjekker og forventer "Feil"
+        $this->assertEquals("Feil", $Feil);
     }
+    
     
     
 
@@ -92,18 +105,40 @@ class adminTest extends PHPUnit\Framework\TestCase{
 
 
     //Funksjon som gir godkjentmelding når man tester om å registrere kunde informasjon.
-    function test_registrerKunde(){
+    function test_registrerKunde_OK(){
         //arrange 
         $adminLogikk = new Admin(new adminDatabaseStub());
         $kunde = new kunde();
+        
         $kunde-> personnummer = 1;
+        $kunde->fornavn = "Petter";
+        $kunde->etternavn = "Hansen";
+        $kunde->adresse = "Torgveien 19";
+        $kunde->postnr = "0927";  //Legger inn annet postnr enn det i adminDatabaseStub
+        $kunde->poststed = "Trondheim"; //Legger inn annet poststed enn det i adminDatabaseStub
+        $kunde->telefonnr = "47651298";
+        $kunde->passord = "Petter1212";
         // act
         $result = $adminLogikk->registrerKunde($kunde);
         // assert
         $this->assertEquals("OK",$result); 
+    }
+    
+    //Funksjon som gir feilmelding når man tester om å registrere kunde informasjon.
+    function test_registrerKunde_Feil(){
+        //arrange 
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $kunde = new kunde();
         
         //Forandrer verdier slik at testen blir feil
         $kunde->personnummer = -1;
+        $kunde->fornavn = "Petter";
+        $kunde->etternavn = "Hansen";
+        $kunde->adresse = "Torgveien 19";
+        $kunde->postnr = "0927";  //Legger inn annet postnr enn det i adminDatabaseStub
+        $kunde->poststed = "Trondheim"; //Legger inn annet poststed enn det i adminDatabaseStub
+        $kunde->telefonnr = "47651298";
+        $kunde->passord = "Petter1212";
         // act
         $result= $adminLogikk->registrerKunde($kunde);
         // assert
