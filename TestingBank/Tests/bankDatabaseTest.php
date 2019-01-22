@@ -12,8 +12,27 @@ class bankDatabaseTest extends PHPunit\Framework\Testcase{
         $this->assertEquals(2,count($result)); //Tester antall kontoer returnert
         $this->assertEquals(13131313,$result[0]);
         $this->assertEquals(14141414,$result[1]);
+    }   
+    
+    function test_registrerBetaling(){
+        $bankLogikk = new Bank(new BankDBStub());
+        $transaksjon = new transaksjon();
+        $kontoNr = new konto();
+        $transaksjon->fraTilKontonummer = 123;
+        $transaksjon->belop = 500;
+        $transaksjon->dato = "0101";
+        $transaksjon->melding = "hei";
+        $result = $bankLogikk->registrerBetaling($kontoNr, $transaksjon);
         
-    } 
+        $this->assertEquals("OK", $result); //Forventer OK
+        
+        $transaksjon->belop = 501; //Forandrer på verdi for å få feil i test
+        $result = $bankLogikk->registrerBetaling($kontoNr, $transaksjon);
+        $this->assertEquals("Feil", $result); //Forventer OK
+        
+        
+    }
+        
     
     //Funksjonen som gir godkjentmelding eller feilmelding når man tester 
     //om personnumemer og passord stemmer
@@ -31,6 +50,4 @@ class bankDatabaseTest extends PHPunit\Framework\Testcase{
         $this->assertEquals("OK", $OK);
         $this->assertEquals("Feil", $Feil);
     } 
-    
-    //Funksjonen som gir feilmelding når man tester om personnumemer og passord stemmer
 }

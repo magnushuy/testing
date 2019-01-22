@@ -126,8 +126,14 @@
 
                 $saldi[] = $saldi1;
                 return $saldi;
+
             }
         }    
+
+                
+            }
+        
+
         //Funksjonen sjekker om personnumemer og passord stemmer              
         function sjekkLoggInn($personnumer, $passord){
             if($personnumer == "21107698233" && $passord == "Petter1212"){
@@ -137,6 +143,22 @@
                 return "Feil";
             }
         }
+
     
         
     }
+
+        
+        function registrerBetaling($kontoNr, $transaksjon){
+            if($transaksjon->fraTilKontonummer == 123 &&
+                    $transaksjon->belop == 500 &&
+                    $transaksjon->dato == "0101" &&
+                    $transaksjon->melding == "hei"){
+                return "OK";
+            }
+            else return "Feil";
+        }
+    }
+    
+    
+
