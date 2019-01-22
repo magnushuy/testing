@@ -149,7 +149,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $this->assertEquals("Feil",$result); 
     }
 
-
+    //Funksjon som gir godkjentmelding når man tester om å registrere konto.
     function test_registerKonto_OK(){
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
@@ -164,7 +164,8 @@ class adminTest extends PHPUnit\Framework\TestCase{
         //Assert
         $this->assertEquals("OK", $result);           
     }
-    
+
+    //Funksjon som gir feilmelding når man tester om å registrere konto.    
     function test_registerKonto_Feil() {
         //Forandrer verdier slik at testen blir feil
         $adminLogikk = new Admin(new adminDatabaseStub());
@@ -198,7 +199,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
        
     }
     
-     //Funksjon som gir godkjentmelding når man tester om å endrer konto.    
+     //Funksjon som gir feilmelding når man tester om å endrer konto.    
     function test_endreKonto_Feil(){
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
@@ -226,7 +227,8 @@ class adminTest extends PHPUnit\Framework\TestCase{
         //Assert
         $this->assertEquals("OK", $result);       
     }
-    
+
+    //Funksjon som gir feilmelding når man tester om å slette konto.
     function test_slettKonto_Feil() {
         //Forandrer verdier slik at testen blir feil
         $adminLogikk = new Admin(new adminDatabaseStub());
