@@ -213,4 +213,32 @@
         $this->assertEquals("Feil",$result);
     }
     
+        function test_hentKundeInfo_OK(){
+             //Arrange
+            $bankLogikk = new Bank(new bankDBStub());
+            $kunde = new kunde();
+            $kunde->personnummer = 21097635882;
+            $personnummer = $kunde->personnummer;
+            //Act
+            $OK = $bankLogikk->hentKundeInfo($personnummer);
+            //Assert
+            $this->assertEquals("21097635882", $OK->personnummer);
+
+        }        
+    
+    
+    function test_hentKundeInfo_Feil(){
+         //Arrange
+        $bankLogikk = new Bank(new bankDBStub());
+        $kunde = new kunde();
+        $kunde->personnummer = -1;
+        $personnummer = $kunde->personnummer;
+        //Act
+        $Feil = $bankLogikk->hentKundeInfo($personnummer);
+        //Assert
+        $this->assertEquals("Feil", $Feil);
+  
+    }    
+    
+    
 }
