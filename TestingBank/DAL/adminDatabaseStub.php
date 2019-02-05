@@ -77,7 +77,7 @@
         $konto1->kontonummer = "123456789012";
         $konto1->personnummer = "12345678901";
         $konto1->saldo = "10";
-        $konto1->type = "Lønnskonto";
+        $konto1->type = "Lonnskonto";
         $konto1->valuta = "NOK";
         $alleKonti[] = $konto1;
         $konto2 = new konto();
