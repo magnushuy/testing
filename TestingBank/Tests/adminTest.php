@@ -157,7 +157,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $konto->kontonummer = 1;
         $konto->personnummer = "12345678901";
         $konto->saldo = "10";
-        $konto->type = "Lønnskonto";
+        $konto->type = "Lonnskonto";
         $konto->valuta = "NOK";
         //Act
         $result = $adminLogikk->registrerKonto($konto);
@@ -177,7 +177,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $konto->kontonummer = -1;
         $konto->personnummer = "12345678901";
         $konto->saldo = "10";
-        $konto->type = "Lønnskonto";
+        $konto->type = "Lonnskonto";
         $konto->valuta = "NOK";
         //Act
         $result = $adminLogikk->registrerKonto($konto);
@@ -257,7 +257,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $this->assertEquals("123456789012",$konto[0]->kontonummer);
         $this->assertEquals("12345678901",$konto[0]->personnummer);
         $this->assertEquals("10",$konto[0]->saldo);
-        $this->assertEquals("Lønnskonto",$konto[0]->type);
+        $this->assertEquals("Lonnskonto",$konto[0]->type);
         $this->assertEquals("NOK",$konto[0]->valuta);
         //Tester andre konto fra kunden.
         $this->assertEquals("12987654321",$konto[1]->kontonummer);
