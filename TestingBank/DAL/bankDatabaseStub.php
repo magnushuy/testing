@@ -2,6 +2,8 @@
     include_once '../Model/domeneModell.php';
     class BankDBStub
     {
+        
+        /*
         function hentEnKunde($personnummer)
         {
            $enKunde = new kunde();
@@ -34,6 +36,9 @@
            $alleKunder[]=$kunde3;
            return $alleKunder;
         }
+         * 
+         * 
+         */
         function hentTransaksjoner($kontoNr,$fraDato,$tilDato)
         {
             date_default_timezone_set("Europe/Oslo");
@@ -89,55 +94,104 @@
         } 
         
         function hentKonti($personnummer){
-            $alleKonto = array();
-            $konti = array();
-            $konto = new konto();
-            $konto->personnummer = 111;
-            $konto->kontonummer = 13131313;
-            $alleKonto[] = $konto;
-            $konto2 = new konto();
-            $konto2->personnummer = 123;
-            $konto2->kontonummer = 12121212;
-            $alleKonto[] = $konto2;
-            $konto3 = new konto();
-            $konto3->personnummer = 111;
-            $konto3->kontonummer = 14141414;
-            $alleKonto[] = $konto3;
-            for($i = 0; $i < count($alleKonto); $i++){
-                if($alleKonto[$i]->personnummer == $personnummer){
-                    $konti[] = $alleKonto[$i]->kontonummer;
-                }
+            if($personnummer == 1234567890){
+                return "OK";
             }
-            return $konti;
+            return "Feil";
         }
 
         
         function hentSaldi($personnummer) {
-            $saldi = array();
-            if($personnummer == -1){
-                return $saldi;
+            if($personnummer == 1234567890){
+                return "OK";
             }
-            else {
-                $saldi1 = new konto;
-                $saldi1->kontonummer= 105010123456;
-                $saldi1->type="Lonnskonto";
-                $saldi1->saldo = 720;
-                $saldi1->valuta="NOK";
+            return "Feil";
+        }    
 
-                $saldi[] = $saldi1;
-                return $saldi;
 
-        //Funksjonen sjekker om personnumemer og passord stemmer
+        //Funksjonen sjekker om personnumemer og passord stemmer              
         function sjekkLoggInn($personnumer, $passord){
             if($personnumer == "21107698233" && $passord == "Petter1212"){
                 return "OK";
             }
             else {
                 return "Feil";
-
             }
         }
-    }
+
+    
+        
+
+        
+        function registrerBetaling($kontoNr, $transaksjon){
+            if($transaksjon->fraTilKontonummer == 123 &&
+                    $transaksjon->belop == 500 &&
+                    $transaksjon->dato == "0101" &&
+                    $transaksjon->melding == "hei"){
+                return "OK";
+            }
+            else return "Feil";
         }
         
+        function hentBetalinger($personnummer) {
+            $betalinger = array();
+            if ($personnummer ==-1){
+                return $betalinger;
+            }
+            else {
+                $betaling1 = new transaksjon();
+                $betaling1->fraTilKontonummer="20102012345-105010123456";
+                $betaling1->transaksjonBelop="100.5";
+                $betaling1->belop="200";
+                $betaling1->dato="150315";
+                $betaling1->melding="Meny Storo";
+                $betaling1->avventer="1";
+                $betalinger[]=$betaling1;
+                
+                return $betalinger;               
+            }
+        }
+
+        function utforBetaling($TxID){
+            $transaksjon = new transaksjon();
+            if($TxID == 1001){
+                return "OK";
+            }
+            return "Feil";
+        }
+        
+        
+        //Funksjon som sjekker om endre kunde informasjon
+        function endreKundeInfo($kunde){
+            if($kunde->postnr =="1812" && $kunde->poststed == "Spydeberg"){
+            return "OK";
+        }
+         return "Feil";
+            
+        }
+        
+        function hentKundeInfo($personnummer){          
+            $kunde = new kunde();
+            if($personnummer == -1 ){
+                return "Feil";                
+            }
+            else {
+                $personnummer = 21097635882;      
+                return $personnummer;
+            }
+        }
+        
+        
+
     }
+    
+    
+?>
+
+        
+        
+    
+    
+    
+
+

@@ -52,8 +52,8 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $kunde->fornavn = "Petter";
         $kunde->etternavn = "Hansen";
         $kunde->adresse = "Torgveien 19";
-        $kunde->postnr = "0580"; //Legger inn riktig postnr som i adminDatabaseStuben.
-        $kunde->poststed = "Asker"; //Legger inn riktig poststed som i adminDatabaseStuben.
+        $kunde->postnr = 1; //Legger inn riktig postnr som i adminDatabaseStuben.
+        $kunde->poststed = "Asker"; 
         $kunde->telefonnr = "47651298";
         $kunde->passord = "Petter1212";
         //Act
@@ -72,8 +72,8 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $kunde->fornavn = "Petter";
         $kunde->etternavn = "Hansen";
         $kunde->adresse = "Torgveien 19";
-        $kunde->postnr = "0927";  //Legger inn annet postnr enn det i adminDatabaseStub
-        $kunde->poststed = "Trondheim"; //Legger inn annet poststed enn det i adminDatabaseStub
+        $kunde->postnr = -1;  //Legger inn annet postnr enn det i adminDatabaseStub
+        $kunde->poststed = "Trondheim"; 
         $kunde->telefonnr = "47651298";
         $kunde->passord = "Petter1212";
         //Act
@@ -82,25 +82,28 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $this->assertEquals("Feil", $Feil);
     }
     
+    
+    
 
     function test_slettKunde_OK() {
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
         $personnummer = 1;
         //Act
-        $OK = $adminLogikk->slettKunde($personnummer);
+        $result = $adminLogikk->slettKunde($personnummer);
         //Assert
-        $this->assertEquals("OK",$OK);
+        $this->assertEquals("OK",$result);
+               
     }
     
     function test_slettKunde_Feil() {
-        //Arrange
+        //Forandrer verdier slik at testen blir feil
         $adminLogikk = new Admin(new adminDatabaseStub());
         $personnummer = -1;
         //Act
-        $OK = $adminLogikk->slettKunde($personnummer);
+        $result = $adminLogikk->slettKunde($personnummer);
         //Assert
-        $this->assertEquals("Feil",$OK);
+        $this->assertEquals("Feil",$result);
     }
     
 
@@ -110,64 +113,78 @@ class adminTest extends PHPUnit\Framework\TestCase{
         //arrange 
         $adminLogikk = new Admin(new adminDatabaseStub());
         $kunde = new kunde();
+        
         $kunde-> personnummer = 1;
+        $kunde->fornavn = "Petter";
+        $kunde->etternavn = "Hansen";
+        $kunde->adresse = "Torgveien 19";
+        $kunde->postnr = "0927";  //Legger inn annet postnr enn det i adminDatabaseStub
+        $kunde->poststed = "Trondheim"; //Legger inn annet poststed enn det i adminDatabaseStub
+        $kunde->telefonnr = "47651298";
+        $kunde->passord = "Petter1212";
         // act
-        $OK = $adminLogikk->registrerKunde($kunde);
+        $result = $adminLogikk->registrerKunde($kunde);
         // assert
-        $this->assertEquals("OK",$OK); 
+        $this->assertEquals("OK",$result); 
     }
-
     
     //Funksjon som gir feilmelding når man tester om å registrere kunde informasjon.
-    function test_registerKunde_Feil()
-    {
-        // arrange
-        $adminLogikk=new Admin(new adminDatabaseStub());
+    function test_registrerKunde_Feil(){
+        //arrange 
+        $adminLogikk = new Admin(new adminDatabaseStub());
         $kunde = new kunde();
+        
+        //Forandrer verdier slik at testen blir feil
         $kunde->personnummer = -1;
+        $kunde->fornavn = "Petter";
+        $kunde->etternavn = "Hansen";
+        $kunde->adresse = "Torgveien 19";
+        $kunde->postnr = "0927";  //Legger inn annet postnr enn det i adminDatabaseStub
+        $kunde->poststed = "Trondheim"; //Legger inn annet poststed enn det i adminDatabaseStub
+        $kunde->telefonnr = "47651298";
+        $kunde->passord = "Petter1212";
         // act
-        $OK= $adminLogikk->registrerKunde($kunde);
+        $result= $adminLogikk->registrerKunde($kunde);
         // assert
-        $this->assertEquals("Feil",$OK); 
+        $this->assertEquals("Feil",$result); 
     }
 
+    //Funksjon som gir godkjentmelding når man tester om å registrere konto.
     function test_registerKonto_OK(){
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
         $konto = new konto();
         $konto->kontonummer = 1;
+        $konto->personnummer = "12345678901";
+        $konto->saldo = "10";
+        $konto->type = "Lønnskonto";
+        $konto->valuta = "NOK";
         //Act
-        $OK = $adminLogikk->registrerKonto($konto);
+        $result = $adminLogikk->registrerKonto($konto);
         //Assert
-        $this->assertEquals("OK", $OK);
-        
-    }
-    
-    function test_registerKonto_Feil(){
-        //Arrange
-        $adminLogikk = new Admin(new adminDatabaseStub());
-        $konto = new konto();
-        $konto->kontonummer = -1;
-        //Act
-        $Feil = $adminLogikk->registrerKonto($konto);
-        //Assert
-        $this->assertEquals("Feil", $Feil);
-        
+
+
+
+        $this->assertEquals("OK", $result);           
     }
 
-    //Funksjon som gir feilmelding når man tester om å endre konto.    
-    function test_endreKonto_Feil(){
-        //Arrange
+    //Funksjon som gir feilmelding når man tester om å registrere konto.    
+    function test_registerKonto_Feil() {
+
+        //Forandrer verdier slik at testen blir feil
         $adminLogikk = new Admin(new adminDatabaseStub());
         $konto = new konto();
         $konto->kontonummer = -1;
-        $konto->personnummer = -1;
+        $konto->personnummer = "12345678901";
+        $konto->saldo = "10";
+        $konto->type = "Lønnskonto";
+        $konto->valuta = "NOK";
         //Act
-        $Feil = $adminLogikk->endreKonto($konto);
+        $result = $adminLogikk->registrerKonto($konto);
         //Assert
-        $this->assertEquals("Feil", $Feil);
-        
+        $this->assertEquals("Feil", $result);
     }
+    
 
     //Funksjon som gir godkjentmelding når man tester om å endrer konto.    
     function test_endreKonto_OK(){
@@ -176,22 +193,31 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $konto = new konto();
         $konto->kontonummer = 12345;
         $konto->personnummer = 54321;
+        $konto->saldo = 100000;
+        $konto->type = "Sparekonto";
+        $konto->valuta = "NOK";
         //Act
         $Ok = $adminLogikk->endreKonto($konto);
         //Assert
         $this->assertEquals("OK", $Ok);
+       
     }
     
-    //Funksjon som gir feilmelding når man tester om å slette konto.    
-    function test_slettKonto_Feil(){
+     //Funksjon som gir feilmelding når man tester om å endrer konto.    
+    function test_endreKonto_Feil(){
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
         $konto = new konto();
-        $konto->kontonummer = -1;
+       
+        $konto->kontonummer = -12345;
+        $konto->personnummer = -54321;
+        $konto->saldo = 100000;
+        $konto->type = "Sparekonto";
+        $konto->valuta = "NOK";
         //Act
-        $result = $adminLogikk->slettKonto($konto->kontonummer);
+        $Feil = $adminLogikk->endreKonto($konto);
         //Assert
-        $this->assertEquals("Feil", $result);
+        $this->assertEquals("Feil", $Feil);
     }
     
     //Funksjon som gir godkjentmelding når man tester om å slette konto.
@@ -203,10 +229,22 @@ class adminTest extends PHPUnit\Framework\TestCase{
         //Act
         $result = $adminLogikk->slettKonto($konto->kontonummer);
         //Assert
-        $this->assertEquals("OK", $result);
+        $this->assertEquals("OK", $result);       
     }
-    
-    
+
+    //Funksjon som gir feilmelding når man tester om å slette konto.
+    function test_slettKonto_Feil() {
+        //Forandrer verdier slik at testen blir feil
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
+        $konto->kontonummer = -1;
+        //Act
+        $result = $adminLogikk->slettKonto($konto->kontonummer);
+        //Assert
+        $this->assertEquals("Feil", $result);
+    }
+
+
     //Funksjon som tester om alle kontoene.
     function test_hentAlleKonti(){
         //Arrange
@@ -219,7 +257,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
         $this->assertEquals("123456789012",$konto[0]->kontonummer);
         $this->assertEquals("12345678901",$konto[0]->personnummer);
         $this->assertEquals("10",$konto[0]->saldo);
-        $this->assertEquals("Lonnskonto",$konto[0]->type);
+        $this->assertEquals("Lønnskonto",$konto[0]->type);
         $this->assertEquals("NOK",$konto[0]->valuta);
         //Tester andre konto fra kunden.
         $this->assertEquals("12987654321",$konto[1]->kontonummer);
