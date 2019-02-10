@@ -5,6 +5,10 @@
 --
 
 -- --------------------------------------------------------
+DROP DATABASE Bank;
+CREATE DATABASE Bank;
+
+
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
 -- Tabellstruktur for tabell `Konto`
