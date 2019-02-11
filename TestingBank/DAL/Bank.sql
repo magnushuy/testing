@@ -5,9 +5,10 @@
 --
 
 -- --------------------------------------------------------
-DROP DATABASE Bank;
-CREATE DATABASE Bank;
-
+DROP TABLE IF EXISTS `Konto`;
+DROP TABLE IF EXISTS `Kunde`;
+DROP TABLE IF EXISTS `Poststed`;
+DROP TABLE IF EXISTS `Transaksjon`;
 
 SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 --
