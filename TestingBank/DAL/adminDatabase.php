@@ -62,7 +62,7 @@ class AdminDB
             if($this->db->affected_rows < 1)
             {
                 $this->db->rollback();
-                return "Feil1";
+                return "Feil";
             }
         }
         
@@ -78,7 +78,7 @@ class AdminDB
         else
         {
             $this->db->rollback();
-            return "Feil2";
+            return "Feil";
         }
     }
     
