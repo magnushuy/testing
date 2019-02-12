@@ -8,8 +8,10 @@
             <file>file:/C:/xampp/htdocs/testing/TestingBank/View/loggInnAdmin.php</file>
             <file>file:/C:/xampp/htdocs/testing/TestingBank/DAL/bankDatabase.php</file>
             <file>file:/C:/xampp/htdocs/testing/TestingBank/API/hentBetalinger.php</file>
+            <file>file:/C:/xampp/htdocs/testing/TestingBank/API/hentKundeInfo.php</file>
             <file>file:/C:/xampp/htdocs/testing/TestingBank/API/hentAlleKunder.php</file>
             <file>file:/C:/xampp/htdocs/testing/TestingBank/Soap/Kevin.xml</file>
+            <file>file:/C:/xampp/htdocs/testing/TestingBank/API/hentSaldi.php</file>
         </group>
     </open-files>
 </project-private>
