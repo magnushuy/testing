@@ -29,7 +29,7 @@ CREATE TABLE IF NOT EXISTS `Konto` (
 --
 
 INSERT INTO `Konto` (`Kontonummer`, `Personnummer`, `Saldo`, `Type`, `Valuta`) VALUES
-('105010123456', '01010110523', 720, 'Lønnskonto', 'NOK'),
+('105010123456', '01010110523', 720, 'Lonnskonto', 'NOK'),
 ('105020123456', '01010110523', 100500, 'Sparekonto', 'NOK'),
 ('22334412345', '01010110523', 10234.5, 'Brukskonto', 'NOK');
 
