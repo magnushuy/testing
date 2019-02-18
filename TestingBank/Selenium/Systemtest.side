@@ -207,6 +207,20 @@
     "id": "4b010b66-593c-48c7-a443-d5e37a20a891",
     "name": "loggUt",
     "commands": [{
+      "id": "90b5ca23-9bb4-4712-905b-d7a8253f512a",
+      "comment": "",
+      "command": "open",
+      "target": "/testing/TestingBank/DAL/initDB.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "16dc22c2-aa03-4b12-b822-bc6d847dd116",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
       "id": "4e7409e9-1ee0-4d2c-8900-80914f93db84",
       "comment": "",
       "command": "open",
@@ -326,6 +340,147 @@
         ["xpath=//a[contains(.,'Logg inn')]", "xpath:innerText"]
       ],
       "value": "Logg inn"
+    }, {
+      "id": "923bd550-aeb9-4faf-ab4e-9cf48af7eb65",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logg inn",
+      "targets": [
+        ["linkText=Logg inn", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Logg inn')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'View/loggInn.php')]", "xpath:href"],
+        ["xpath=//div[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logg inn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "df234f0a-00e9-4952-8128-b7bad6f5b98c",
+      "comment": "",
+      "command": "type",
+      "target": "id=personNr",
+      "targets": [
+        ["id=personNr", "id"],
+        ["css=#personNr", "css:finder"],
+        ["xpath=//input[@id='personNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "01010110523"
+    }, {
+      "id": "4a6465f3-534f-46e7-a932-3f61405b472b",
+      "comment": "",
+      "command": "type",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "HeiHei"
+    }, {
+      "id": "102629d7-abe5-4564-a77a-9385701f27f4",
+      "comment": "",
+      "command": "click",
+      "target": "id=loggInn",
+      "targets": [
+        ["id=loggInn", "id"],
+        ["css=#loggInn", "css:finder"],
+        ["xpath=//button[@id='loggInn']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logg inn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "79a8face-a726-49cd-934b-1e8d4ee024cc",
+    "name": "hentAlleKonti",
+    "commands": [{
+      "id": "b83c52b1-41f0-4b44-9ea6-2da92ec3a81a",
+      "comment": "",
+      "command": "open",
+      "target": "/testing/TestingBank/DAL/initDB.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "08295a94-6ad0-43e0-9972-4673ee8de733",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "afd8a169-befc-4d6b-8a83-2a8d2bafa1e9",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/testingBank/View/saldo.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7d6bbc14-0288-427b-8ca9-38798ae6f98b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a4ddfaf9-1f26-4537-9925-bcaa07cbfa1a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Saldo",
+      "targets": [
+        ["linkText=Saldo", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Saldo')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '../View/saldo.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Saldo')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "9397a737-bdd6-4df6-9be0-5225f8720edc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listSaldi']/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'105010123456')]", "xpath:innerText"]
+      ],
+      "value": "105010123456"
+    }, {
+      "id": "659e602b-9c5f-4e79-b9e8-4ee8a36ba950",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listSaldi']/table/tbody/tr[2]/td", "xpath:idRelative"],
+        ["xpath=//tr[2]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'105020123456')]", "xpath:innerText"]
+      ],
+      "value": "105020123456"
+    }, {
+      "id": "7a2ecd59-d93a-4d71-b8b1-f81b969acb34",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listSaldi']/table/tbody/tr[3]/td", "xpath:idRelative"],
+        ["xpath=//tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'22334412345')]", "xpath:innerText"]
+      ],
+      "value": "22334412345"
+    }, {
+      "id": "dd07be1f-0d19-4fa4-b7c8-3f98e35b7281",
+      "comment": "",
+      "command": "",
+      "target": "",
+      "targets": [],
+      "value": ""
     }]
   }],
   "suites": [{
