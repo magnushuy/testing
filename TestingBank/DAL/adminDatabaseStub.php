@@ -46,7 +46,7 @@
      
     //Funksjon som endrer informasjoner til kundene.
     function endreKundeInfo($kunde){
-        if($kunde->postnr =="0580" && $kunde->poststed == "Asker"){
+        if($kunde->postnr == 1){
             return "OK";
         }
          return "Feil";
@@ -64,7 +64,7 @@
     
     //Funksjon som sjekker om kunden er slettet.
     function slettKunde($personnummer){
-        if($kunde->personnummer == -1){
+        if($personnummer == -1){
             return "Feil";
         }
         return "OK";
@@ -126,5 +126,4 @@
         }
     }
 
- }    
-    
+ }

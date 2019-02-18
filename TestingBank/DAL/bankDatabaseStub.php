@@ -86,5 +86,107 @@
                 $dato +=(60*60*24); // en dag i tillegg i sekunder
             }
             return $konto;
+        } 
+        
+        function hentKonti($personnummer){
+            if($personnummer == 1234567890){
+                return "OK";
+            }
+            return "Feil";
         }
+
+        
+        function hentSaldi($personnummer) {
+            if($personnummer == 1234567890){
+                return "OK";
+            }
+            return "Feil";
+        }    
+
+
+        //Funksjonen sjekker om personnumemer og passord stemmer              
+        function sjekkLoggInn($personnumer, $passord){
+            if($personnumer == "21107698233" && $passord == "Petter1212"){
+                return "OK";
+            }
+            else {
+                return "Feil";
+            }
+        }
+
+    
+        
+
+        
+        function registrerBetaling($kontoNr, $transaksjon){
+            if($transaksjon->fraTilKontonummer == 123 &&
+                    $transaksjon->belop == 500 &&
+                    $transaksjon->dato == "0101" &&
+                    $transaksjon->melding == "hei"){
+                return "OK";
+            }
+            else return "Feil";
+        }
+        
+        function hentBetalinger($personnummer) {
+            $betalinger = array();
+            if ($personnummer ==-1){
+                return $betalinger;
+            }
+            else {
+                $betaling1 = new transaksjon();
+                $betaling1->fraTilKontonummer="20102012345-105010123456";
+                $betaling1->transaksjonBelop="100.5";
+                $betaling1->belop="200";
+                $betaling1->dato="150315";
+                $betaling1->melding="Meny Storo";
+                $betaling1->avventer="1";
+                $betalinger[]=$betaling1;
+                
+                return $betalinger;               
+            }
+        }
+
+        function utforBetaling($TxID){
+            $transaksjon = new transaksjon();
+            if($TxID == 1001){
+                return "OK";
+            }
+            return "Feil";
+        }
+        
+        
+        //Funksjon som sjekker om endre kunde informasjon
+        function endreKundeInfo($kunde){
+            if($kunde->postnr =="1812" && $kunde->poststed == "Spydeberg"){
+            return "OK";
+        }
+         return "Feil";
+            
+        }
+        
+        function hentKundeInfo($personnummer){          
+            $kunde = new kunde();
+            if($personnummer == -1 ){
+                return "Feil";                
+            }
+            else {
+                $personnummer = 21097635882;      
+                return $personnummer;
+            }
+        }
+        
+        
+
     }
+    
+    
+?>
+
+        
+        
+    
+    
+    
+
+
