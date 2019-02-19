@@ -1,21 +1,6 @@
-adminEndreKonto 
+Integrasjonstesting og Systemtesting
 
-adminEndreKunde
+adminSlettKonto
+adminSlettKunde
 
-adminHentKonti
-
-adminRegistrerKunde
-
-adminRegistrerKonto
-
-endreKundeInfo
-
-hentKundeInfo
-
-hentSaldi
-
-hentTransaksjoner
-
-utforBetaling
-
-hentAlleKunder
+utforBetaling      (bare Integrasjonstesting)
