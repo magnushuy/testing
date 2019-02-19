@@ -1694,7 +1694,7 @@
     "persistSession": false,
     "parallel": false,
     "timeout": 300,
-    "tests": ["f8ec4bda-d605-46c1-a91a-866ca0b18c0c"]
+    "tests": ["f8ec4bda-d605-46c1-a91a-866ca0b18c0c", "19e416e5-b3f8-4d71-b33d-b53478384700", "af1e67f8-2db4-4656-8e53-070fa47aa78f", "2be69bb0-d5fd-4d10-958b-804f12cc58ff"]
   }, {
     "id": "c23b84af-1c9a-4ca9-99ae-6e1303ff8f52",
     "name": "BankTest",
