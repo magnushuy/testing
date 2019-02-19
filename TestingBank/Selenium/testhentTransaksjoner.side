@@ -1,0 +1,784 @@
+{
+  "id": "c977726f-9c1a-494c-9501-a64702996186",
+  "version": "2.0",
+  "name": "testhentTransaksjoner",
+  "url": "http://localhost",
+  "tests": [{
+    "id": "594017ff-65b4-4e52-9fde-43018fe996a9",
+    "name": "hentTransaksjoner",
+    "commands": [{
+      "id": "3b272374-7a68-4fa8-97b4-da2363eec59d",
+      "comment": "",
+      "command": "open",
+      "target": "/TestingBank/Index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a504da1d-319e-4d7e-a2c5-a7f8cf192f3b",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1536x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "a3942c1f-8be0-498c-ac36-10df824bb589",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logg inn",
+      "targets": [
+        ["linkText=Logg inn", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Logg inn')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'View/loggInn.php')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logg inn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a64f6a72-ca18-4438-b17d-a858b4a87d6a",
+      "comment": "",
+      "command": "click",
+      "target": "id=personNr",
+      "targets": [
+        ["id=personNr", "id"],
+        ["css=#personNr", "css:finder"],
+        ["xpath=//input[@id='personNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "02ca73ea-b1ce-4e36-b07b-50ea1db80d86",
+      "comment": "",
+      "command": "type",
+      "target": "id=personNr",
+      "targets": [
+        ["id=personNr", "id"],
+        ["css=#personNr", "css:finder"],
+        ["xpath=//input[@id='personNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "01010110523"
+    }, {
+      "id": "ebb63340-ce4b-4a96-9844-6b44bf9feffa",
+      "comment": "",
+      "command": "click",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cacd711b-b08b-47b7-a998-838390a3ea0d",
+      "comment": "",
+      "command": "type",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "HeiHei"
+    }, {
+      "id": "5e408918-db40-4154-aa87-5d81a4ae6326",
+      "comment": "",
+      "command": "click",
+      "target": "id=loggInn",
+      "targets": [
+        ["id=loggInn", "id"],
+        ["css=#loggInn", "css:finder"],
+        ["xpath=//button[@id='loggInn']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logg inn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "54d2a838-9f90-4778-9f80-84de763e493b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Transaksjoner",
+      "targets": [
+        ["linkText=Transaksjoner", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Transaksjoner')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '../View/transaksjon.php')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Transaksjoner')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0b17ba94-0941-463e-8be7-a66d86c04bcf",
+      "comment": "",
+      "command": "click",
+      "target": "id=fraDato",
+      "targets": [
+        ["id=fraDato", "id"],
+        ["css=#fraDato", "css:finder"],
+        ["xpath=//input[@id='fraDato']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f3164481-e3f4-482e-9b3f-84f394bb8cd5",
+      "comment": "",
+      "command": "type",
+      "target": "id=fraDato",
+      "targets": [
+        ["id=fraDato", "id"],
+        ["css=#fraDato", "css:finder"],
+        ["xpath=//input[@id='fraDato']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1950-01-01"
+    }, {
+      "id": "ebdafce3-b9d6-4515-92f4-96f934016c91",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=fraDato",
+      "targets": [
+        ["id=fraDato", "id"],
+        ["css=#fraDato", "css:finder"],
+        ["xpath=//input[@id='fraDato']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1950-01-01"
+    }, {
+      "id": "ba5c17a8-a040-4e9f-bcd7-dded1e027b48",
+      "comment": "",
+      "command": "click",
+      "target": "id=tilDato",
+      "targets": [
+        ["id=tilDato", "id"],
+        ["css=#tilDato", "css:finder"],
+        ["xpath=//input[@id='tilDato']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cb228777-d165-4cc9-8911-5c7a1bc72d2c",
+      "comment": "",
+      "command": "type",
+      "target": "id=tilDato",
+      "targets": [
+        ["id=tilDato", "id"],
+        ["css=#tilDato", "css:finder"],
+        ["xpath=//input[@id='tilDato']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2019-01-01"
+    }, {
+      "id": "cdde9875-0008-49c1-9159-75f47418deb0",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=tilDato",
+      "targets": [
+        ["id=tilDato", "id"],
+        ["css=#tilDato", "css:finder"],
+        ["xpath=//input[@id='tilDato']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "2019-01-01"
+    }, {
+      "id": "440d3784-29d4-4256-b55e-f5e39edfeafc",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=kontoNr",
+      "targets": [
+        ["id=kontoNr", "id"],
+        ["css=#kontoNr", "css:finder"],
+        ["xpath=//select[@id='kontoNr']", "xpath:attributes"],
+        ["xpath=//div[@id='selekt']/select", "xpath:idRelative"],
+        ["xpath=//select", "xpath:position"]
+      ],
+      "value": "105010123456"
+    }, {
+      "id": "7ec69302-2345-4714-9aad-48ba0aadea04",
+      "comment": "",
+      "command": "click",
+      "target": "id=sok",
+      "targets": [
+        ["id=sok", "id"],
+        ["css=#sok", "css:finder"],
+        ["xpath=//button[@id='sok']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Søk')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "1faf3f6d-1a55-4168-a83d-600ea5ce3d14",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'2015-03-15')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "3a6680d9-8fb0-43f1-b784-7256606f362d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr/td", "xpath:idRelative"],
+        ["xpath=//td", "xpath:position"],
+        ["xpath=//td[contains(.,'2015-03-15')]", "xpath:innerText"]
+      ],
+      "value": "2015-03-15"
+    }, {
+      "id": "b6c552f6-48df-477d-9452-b9ab5b41fcb9",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(1) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'20102012345')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "88e37854-64f0-411a-afcd-69ab171d09aa",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr/td[2]", "xpath:idRelative"],
+        ["xpath=//td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'20102012345')]", "xpath:innerText"]
+      ],
+      "value": "20102012345"
+    }, {
+      "id": "efd5d98b-95b2-40d8-b19d-fd709de7b4b1",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(1) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr/td[3]", "xpath:idRelative"],
+        ["xpath=//td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'-100.5')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "6743c596-6e75-43d3-88fb-e603b27e5dca",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr/td[3]", "xpath:idRelative"],
+        ["xpath=//td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'-100.5')]", "xpath:innerText"]
+      ],
+      "value": "-100.5"
+    }, {
+      "id": "61b51845-08e3-4efd-8807-26c1c2721567",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(1) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr/td[4]", "xpath:idRelative"],
+        ["xpath=//td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Meny Storo')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "9fb51e5c-bfc9-487b-ac1c-0b8a173a5af4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr/td[4]", "xpath:idRelative"],
+        ["xpath=//td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Meny Storo')]", "xpath:innerText"]
+      ],
+      "value": "Meny Storo"
+    }, {
+      "id": "0af689e5-522b-4b10-a4e2-a11c128cd412",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[2]/td", "xpath:idRelative"],
+        ["xpath=//tr[2]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'2015-03-20')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "43d01b11-82c3-4dd6-8b54-4e5e50b61e2f",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[2]/td", "xpath:idRelative"],
+        ["xpath=//tr[2]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'2015-03-20')]", "xpath:innerText"]
+      ],
+      "value": "2015-03-20"
+    }, {
+      "id": "2e010aaf-5592-4160-b15b-b5f984f01b42",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]", "xpath:position"]
+      ],
+      "value": "null"
+    }, {
+      "id": "89e02cf7-8e7c-45c2-8729-52ca0fafd89c",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[2]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[2]", "xpath:position"]
+      ],
+      "value": "20102012345"
+    }, {
+      "id": "dd49c4ea-1fbd-4c1b-9bac-30eaf2ffa8f6",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(2) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[2]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'400.4')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "46be61df-56a7-42b1-8066-0314cb54dc54",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(3)",
+      "targets": [],
+      "value": "400.4"
+    }, {
+      "id": "60da82a4-a613-4e9d-9073-3269364467dc",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(2) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[2]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Innebtaling')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "8992b6de-d6f4-49fc-a5b4-6aa95bc747c0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[2]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Innebtaling')]", "xpath:innerText"]
+      ],
+      "value": "Innebtaling"
+    }, {
+      "id": "d936ef3b-4e21-45a1-bbda-cbed397dbe49",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(3) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[3]/td", "xpath:idRelative"],
+        ["xpath=//tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'2015-03-30')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "db39a890-7171-4b31-b06b-c55ce0abaee0",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[3]/td", "xpath:idRelative"],
+        ["xpath=//tr[3]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'2015-03-30')]", "xpath:innerText"]
+      ],
+      "value": "2015-03-30"
+    }, {
+      "id": "46c1c7d6-2b8a-4829-8554-edae1550b484",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(3) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[3]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'20102012347')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "b41c290e-ac52-465b-8704-b52109248d0d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[3]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'20102012347')]", "xpath:innerText"]
+      ],
+      "value": "20102012347"
+    }, {
+      "id": "4510f120-3b20-4599-a23b-2fff5d0be92f",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(3) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[3]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'-5000.5')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "77192e23-7e01-4439-9aff-cc42d4cae19d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[3]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'-5000.5')]", "xpath:innerText"]
+      ],
+      "value": "-5000.5"
+    }, {
+      "id": "abfb82a3-85b8-4851-9ab2-263cc358c868",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(3) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[3]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Skatt')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "10028133-a024-4a9f-9990-2bfaa17d9a15",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[3]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Skatt')]", "xpath:innerText"]
+      ],
+      "value": "Skatt"
+    }, {
+      "id": "6a8f24fd-a399-4961-bdac-c92453c0f603",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(4) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[4]/td", "xpath:idRelative"],
+        ["xpath=//tr[4]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'2012-12-12')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "e4d18318-8580-41bb-bd9f-949cc77fa2d4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[4]/td", "xpath:idRelative"],
+        ["xpath=//tr[4]/td", "xpath:position"],
+        ["xpath=//td[contains(.,'2012-12-12')]", "xpath:innerText"]
+      ],
+      "value": "2012-12-12"
+    }, {
+      "id": "dc3b737f-5795-46dc-a8e9-f1c8a2c628fa",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(4) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[4]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'345678908')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "2ccf2df5-c218-412d-ba46-727603eeff73",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[4]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'345678908')]", "xpath:innerText"]
+      ],
+      "value": "345678908"
+    }, {
+      "id": "fef35bd4-3b15-432f-9625-7b0854b59bc9",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(4) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[4]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'3000')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "56b37538-60bf-438a-b5e7-5ac2675e2abe",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[4]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'3000')]", "xpath:innerText"]
+      ],
+      "value": "3000"
+    }, {
+      "id": "8adad326-ffb1-453a-86ab-04ddc1851d88",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(4) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[4]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[4]", "xpath:position"]
+      ],
+      "value": "null"
+    }, {
+      "id": "b32ba43c-9dea-477c-89eb-4a340957a242",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(4) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(4) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[4]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[4]/td[4]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "88774481-352e-48d4-ac41-e86e8b181e61",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(5) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[5]/td", "xpath:idRelative"],
+        ["xpath=//tr[5]/td", "xpath:position"]
+      ],
+      "value": "null"
+    }, {
+      "id": "10d47235-9d80-4531-a7d8-b773e6193b14",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(5) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[5]/td", "xpath:idRelative"],
+        ["xpath=//tr[5]/td", "xpath:position"]
+      ],
+      "value": "2012-12-12"
+    }, {
+      "id": "f96adef1-dac3-4b4b-a796-23aa1936461e",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(5) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[5]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'234534678')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "f9d206ad-c7dc-4a1f-891e-56077e46ba4d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(5) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[5]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'234534678')]", "xpath:innerText"]
+      ],
+      "value": "234534678"
+    }, {
+      "id": "e6d6f4cb-c0c8-428f-960a-28008bfcda5f",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(5) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[5]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[3]", "xpath:position"]
+      ],
+      "value": "null"
+    }, {
+      "id": "8cf7f05a-74d1-476a-923e-d06c1d878a68",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(5) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[5]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[3]", "xpath:position"]
+      ],
+      "value": "15"
+    }, {
+      "id": "a8e4e883-2279-4afc-a81c-7f0409c7acb1",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(5) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[5]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Hei')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "f001ccb2-3610-42d1-a207-cf2fbc75bb3d",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(5) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[5]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Hei')]", "xpath:innerText"]
+      ],
+      "value": "Hei"
+    }, {
+      "id": "1ac5dce6-0030-4eff-9b44-39ff87b021ec",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(6) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[6]/td", "xpath:idRelative"],
+        ["xpath=//tr[6]/td", "xpath:position"]
+      ],
+      "value": "null"
+    }, {
+      "id": "34ac55c1-e132-4d21-b0ba-8a8cc245ccd7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(6) > td:nth-child(1)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(1)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[6]/td", "xpath:idRelative"],
+        ["xpath=//tr[6]/td", "xpath:position"]
+      ],
+      "value": "2012-12-12"
+    }, {
+      "id": "0fc83e0a-678d-465e-abde-620703a9d1e5",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(6) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[6]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'1234254365')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "25e60be6-98fa-40cc-a568-bb9456051bf7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(6) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(2)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[6]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'1234254365')]", "xpath:innerText"]
+      ],
+      "value": "1234254365"
+    }, {
+      "id": "24efded8-a8f0-4d48-9382-6809cc1dfdd2",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(6) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[6]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'125')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "e8dff5e0-bb00-43cf-b5c6-167780250ed9",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(6) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[6]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'125')]", "xpath:innerText"]
+      ],
+      "value": "125"
+    }, {
+      "id": "f5596b15-5f82-41c0-ae62-42e37537714c",
+      "comment": "",
+      "command": "assert",
+      "target": "css=tr:nth-child(6) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[6]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Hopp')]", "xpath:innerText"]
+      ],
+      "value": "null"
+    }, {
+      "id": "96199ad9-2313-48a8-9776-c026023c3777",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(6) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listTransaksjoner']/table/tbody/tr[6]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'Hopp')]", "xpath:innerText"]
+      ],
+      "value": "Hopp"
+    }]
+  }],
+  "suites": [{
+    "id": "9376dc49-55da-46df-b3bd-f7ee2a37844b",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["594017ff-65b4-4e52-9fde-43018fe996a9"]
+  }],
+  "urls": ["http://localhost/"],
+  "plugins": []
+}
