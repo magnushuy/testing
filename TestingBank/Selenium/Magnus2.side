@@ -1,0 +1,785 @@
+{
+  "id": "7ac91033-3d5f-44ea-8e73-8885e74d55fb",
+  "version": "2.0",
+  "name": "Systemtesting",
+  "url": "http://localhost/testingBank/Index.php",
+  "tests": [{
+    "id": "0de387d5-4be9-46ca-b021-41d2387471c5",
+    "name": "adminRegistrerKonto",
+    "commands": [{
+      "id": "c7c20fed-0768-40a1-b249-5eca49a55b22",
+      "comment": "",
+      "command": "open",
+      "target": "/testing/TestingBank/DAL/initDB.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ac60c3d6-1dd9-487f-9c35-288f14766a93",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96df80b7-77cf-42a3-9a81-35aaf9e0c8c9",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/TestingBank/Index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1d1461ee-251b-4688-91a0-6a051f281251",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1900x1020",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "61d40881-3bb3-466a-a77c-068e2c1c8beb",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Admin",
+      "targets": [
+        ["linkText=Admin", "linkText"],
+        ["css=li > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Admin')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/TestingBank/View/loggInnAdmin.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Admin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "da69d9c5-6d4b-4bd1-b6af-3eede1c1d44e",
+      "comment": "",
+      "command": "click",
+      "target": "id=bruker",
+      "targets": [
+        ["id=bruker", "id"],
+        ["css=#bruker", "css:finder"],
+        ["xpath=//input[@id='bruker']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c6c39f3e-1524-4741-81d8-24ad82a7499d",
+      "comment": "",
+      "command": "type",
+      "target": "id=bruker",
+      "targets": [
+        ["id=bruker", "id"],
+        ["css=#bruker", "css:finder"],
+        ["xpath=//input[@id='bruker']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Admin"
+    }, {
+      "id": "98903526-423d-4c10-9874-b023d78e3e32",
+      "comment": "",
+      "command": "click",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1e9bd2d7-c1a2-4be8-b792-85af24d2c9e5",
+      "comment": "",
+      "command": "type",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Admin"
+    }, {
+      "id": "b0b8eb4c-759a-4a18-a0ae-c691df9aa3e5",
+      "comment": "",
+      "command": "click",
+      "target": "id=loggInn",
+      "targets": [
+        ["id=loggInn", "id"],
+        ["css=#loggInn", "css:finder"],
+        ["xpath=//input[@id='loggInn']", "xpath:attributes"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0abdfdd7-e804-4ddc-a5fe-300dfe662e54",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Register konto",
+      "targets": [
+        ["linkText=Register konto", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Register konto')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'adminRegisterKonto.php')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Register konto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dd8b2f99-41ef-4483-8748-b6e26850b785",
+      "comment": "",
+      "command": "click",
+      "target": "id=kontoNr",
+      "targets": [
+        ["id=kontoNr", "id"],
+        ["css=#kontoNr", "css:finder"],
+        ["xpath=//input[@id='kontoNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c054fcd8-60bf-4ae4-9171-c4db2ecdc6b7",
+      "comment": "",
+      "command": "type",
+      "target": "id=kontoNr",
+      "targets": [
+        ["id=kontoNr", "id"],
+        ["css=#kontoNr", "css:finder"],
+        ["xpath=//input[@id='kontoNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "121212121212"
+    }, {
+      "id": "cf5e0205-d4a4-4520-82c7-e90855bfb26c",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["css=#type", "css:finder"],
+        ["xpath=//input[@id='type']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "cfd3ef4f-e9fb-4ff5-933b-d347820a2b7e",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["css=#type", "css:finder"],
+        ["xpath=//input[@id='type']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "59a3f6d4-7cf5-4c51-b2b1-35fa42a153e0",
+      "comment": "",
+      "command": "doubleClick",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["css=#type", "css:finder"],
+        ["xpath=//input[@id='type']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "81c694a2-44ef-4a48-9652-b26d1c95f89b",
+      "comment": "",
+      "command": "type",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["css=#type", "css:finder"],
+        ["xpath=//input[@id='type']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "Testkonto"
+    }, {
+      "id": "f9d565b1-4113-4152-8dc0-8510858da594",
+      "comment": "",
+      "command": "click",
+      "target": "id=valuta",
+      "targets": [
+        ["id=valuta", "id"],
+        ["css=#valuta", "css:finder"],
+        ["xpath=//input[@id='valuta']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5b430db7-089c-4095-b08b-2b34b970e73e",
+      "comment": "",
+      "command": "type",
+      "target": "id=valuta",
+      "targets": [
+        ["id=valuta", "id"],
+        ["css=#valuta", "css:finder"],
+        ["xpath=//input[@id='valuta']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "EUR"
+    }, {
+      "id": "81334499-e1f6-4648-85b0-4d5449331695",
+      "comment": "",
+      "command": "click",
+      "target": "id=personnummer",
+      "targets": [
+        ["id=personnummer", "id"],
+        ["css=#personnummer", "css:finder"],
+        ["xpath=//input[@id='personnummer']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c550b25c-468a-41bc-93a5-0825828b5e2a",
+      "comment": "",
+      "command": "type",
+      "target": "id=personnummer",
+      "targets": [
+        ["id=personnummer", "id"],
+        ["css=#personnummer", "css:finder"],
+        ["xpath=//input[@id='personnummer']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "01010110523"
+    }, {
+      "id": "6d7b3fd7-e8c2-4ef0-8ccf-3b81f8172ce2",
+      "comment": "",
+      "command": "click",
+      "target": "id=regKonto",
+      "targets": [
+        ["id=regKonto", "id"],
+        ["css=#regKonto", "css:finder"],
+        ["xpath=//button[@id='regKonto']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrer konto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ab50331-7370-4f95-ac7e-b47fc5293520",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Endre konto",
+      "targets": [
+        ["linkText=Endre konto", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Endre konto')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'adminEndreKonto.php')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Endre konto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "7c7ae26a-9c67-4464-b6c1-f0d07551766c",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=kontonummer3",
+      "targets": [
+        ["id=kontonummer3", "id"],
+        ["css=#kontonummer3", "css:finder"],
+        ["xpath=//input[@id='kontonummer3']", "xpath:attributes"],
+        ["xpath=//div[@id='endreKonto']/table/tbody/tr[3]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/input", "xpath:position"]
+      ],
+      "value": "121212121212"
+    }, {
+      "id": "bbe4c1f7-f998-44ca-931d-0d1ccb3af864",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=type3",
+      "targets": [
+        ["id=type3", "id"],
+        ["css=#type3", "css:finder"],
+        ["xpath=//input[@id='type3']", "xpath:attributes"],
+        ["xpath=//div[@id='endreKonto']/table/tbody/tr[3]/td[3]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[3]/input", "xpath:position"]
+      ],
+      "value": "Testkonto"
+    }, {
+      "id": "8dff398f-cb36-459b-965b-b5d46f0ada50",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=valuta3",
+      "targets": [
+        ["id=valuta3", "id"],
+        ["css=#valuta3", "css:finder"],
+        ["xpath=//input[@id='valuta3']", "xpath:attributes"],
+        ["xpath=//div[@id='endreKonto']/table/tbody/tr[3]/td[4]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[4]/input", "xpath:position"]
+      ],
+      "value": "EUR"
+    }, {
+      "id": "b6bae7cc-a42a-494e-8687-9ead79de262e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=personnummer3",
+      "targets": [
+        ["id=personnummer3", "id"],
+        ["css=#personnummer3", "css:finder"],
+        ["xpath=//input[@id='personnummer3']", "xpath:attributes"],
+        ["xpath=//div[@id='endreKonto']/table/tbody/tr[3]/td[5]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[5]/input", "xpath:position"]
+      ],
+      "value": "01010110523"
+    }]
+  }, {
+    "id": "0a2d4d29-66db-44e8-810a-bb273fb768ab",
+    "name": "adminRegistrerKunde",
+    "commands": [{
+      "id": "352fc718-a94a-442b-af03-7a4dfd3198ed",
+      "comment": "",
+      "command": "open",
+      "target": "/testing/TestingBank/DAL/initDB.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "6ff1e1d9-a7ba-4dbe-9bd7-b36299b6ec4b",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "25abefd0-8af7-4faf-9c04-b9aab6beb03d",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/TestingBank/Index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "b166998e-341f-4f88-8dff-d15c6407f820",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Admin",
+      "targets": [
+        ["linkText=Admin", "linkText"],
+        ["css=li > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Admin')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/TestingBank/View/loggInnAdmin.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Admin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "340d5d0e-cec5-4dc3-a2d1-d6afb6336db8",
+      "comment": "",
+      "command": "click",
+      "target": "id=bruker",
+      "targets": [
+        ["id=bruker", "id"],
+        ["css=#bruker", "css:finder"],
+        ["xpath=//input[@id='bruker']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "484262e4-f8e2-4fbe-b1bd-7e58b31c89a2",
+      "comment": "",
+      "command": "type",
+      "target": "id=bruker",
+      "targets": [
+        ["id=bruker", "id"],
+        ["css=#bruker", "css:finder"],
+        ["xpath=//input[@id='bruker']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Admin"
+    }, {
+      "id": "dfecce66-37da-4f4e-ba3e-0c16822032a6",
+      "comment": "",
+      "command": "click",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "1658bf98-84de-4f3e-8411-82d745389652",
+      "comment": "",
+      "command": "type",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Admin"
+    }, {
+      "id": "74e49ab9-c642-4969-91ac-eefacd8c0fe7",
+      "comment": "",
+      "command": "click",
+      "target": "id=loggInn",
+      "targets": [
+        ["id=loggInn", "id"],
+        ["css=#loggInn", "css:finder"],
+        ["xpath=//input[@id='loggInn']", "xpath:attributes"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "8c9afa0f-1f48-4f33-b5ab-d454db0a13ef",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Registrer kunde",
+      "targets": [
+        ["linkText=Registrer kunde", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Registrer kunde')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'adminRegisterKunde.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Registrer kunde')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e78127f9-00c6-4fee-aa90-fcf7469cf445",
+      "comment": "",
+      "command": "mouseOver",
+      "target": "linkText=Registrer kunde",
+      "targets": [
+        ["linkText=Registrer kunde", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Registrer kunde')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'adminRegisterKunde.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Registrer kunde')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "52e49832-aed7-447c-a984-8de1f5745c94",
+      "comment": "",
+      "command": "click",
+      "target": "id=personnummer",
+      "targets": [
+        ["id=personnummer", "id"],
+        ["css=#personnummer", "css:finder"],
+        ["xpath=//input[@id='personnummer']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "12cc3304-a8d7-4f07-84cd-fef071c2c743",
+      "comment": "",
+      "command": "type",
+      "target": "id=personnummer",
+      "targets": [
+        ["id=personnummer", "id"],
+        ["css=#personnummer", "css:finder"],
+        ["xpath=//input[@id='personnummer']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "12345678910"
+    }, {
+      "id": "cb7fa090-49ad-43a3-8dbc-f16ab5de9def",
+      "comment": "",
+      "command": "click",
+      "target": "id=fornavn",
+      "targets": [
+        ["id=fornavn", "id"],
+        ["css=#fornavn", "css:finder"],
+        ["xpath=//input[@id='fornavn']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "30e1c38b-3e92-4de3-bed2-f4ede858105b",
+      "comment": "",
+      "command": "type",
+      "target": "id=fornavn",
+      "targets": [
+        ["id=fornavn", "id"],
+        ["css=#fornavn", "css:finder"],
+        ["xpath=//input[@id='fornavn']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "TestFornavn"
+    }, {
+      "id": "f6747b6b-be01-4774-9c9a-4221314f04f9",
+      "comment": "",
+      "command": "click",
+      "target": "id=etternavn",
+      "targets": [
+        ["id=etternavn", "id"],
+        ["css=#etternavn", "css:finder"],
+        ["xpath=//input[@id='etternavn']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ea613730-a4af-43ce-9a84-1efa447af023",
+      "comment": "",
+      "command": "type",
+      "target": "id=etternavn",
+      "targets": [
+        ["id=etternavn", "id"],
+        ["css=#etternavn", "css:finder"],
+        ["xpath=//input[@id='etternavn']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "TestEtternavn"
+    }, {
+      "id": "9c9158e9-6012-42d0-a0e7-ae578fcb1db4",
+      "comment": "",
+      "command": "click",
+      "target": "id=adresse",
+      "targets": [
+        ["id=adresse", "id"],
+        ["css=#adresse", "css:finder"],
+        ["xpath=//input[@id='adresse']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "63323c68-bb3b-40c2-98da-66269bbb2d99",
+      "comment": "",
+      "command": "type",
+      "target": "id=adresse",
+      "targets": [
+        ["id=adresse", "id"],
+        ["css=#adresse", "css:finder"],
+        ["xpath=//input[@id='adresse']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "TestAdresse"
+    }, {
+      "id": "473e3932-d90b-400d-900c-94beb7423103",
+      "comment": "",
+      "command": "click",
+      "target": "id=poststed",
+      "targets": [
+        ["id=poststed", "id"],
+        ["css=#poststed", "css:finder"],
+        ["xpath=//input[@id='poststed']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a2a0ad05-2580-4383-a7dc-a84ef88f3621",
+      "comment": "",
+      "command": "type",
+      "target": "id=postnr",
+      "targets": [
+        ["id=postnr", "id"],
+        ["css=#postnr", "css:finder"],
+        ["xpath=//input[@id='postnr']", "xpath:attributes"],
+        ["xpath=//div[5]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "f1b0e73f-d60a-490a-91c2-8bf6129a984f",
+      "comment": "",
+      "command": "click",
+      "target": "id=poststed",
+      "targets": [
+        ["id=poststed", "id"],
+        ["css=#poststed", "css:finder"],
+        ["xpath=//input[@id='poststed']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "f184715a-eda3-4971-9974-08c37441fb34",
+      "comment": "",
+      "command": "type",
+      "target": "id=poststed",
+      "targets": [
+        ["id=poststed", "id"],
+        ["css=#poststed", "css:finder"],
+        ["xpath=//input[@id='poststed']", "xpath:attributes"],
+        ["xpath=//div[6]/input", "xpath:position"]
+      ],
+      "value": "TestPoststed"
+    }, {
+      "id": "f6c53424-8d6f-4f73-aa2f-c9e587bcf8f1",
+      "comment": "",
+      "command": "click",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a791ccc2-734a-464b-b4cc-61877fef5063",
+      "comment": "",
+      "command": "type",
+      "target": "id=telefonnr",
+      "targets": [
+        ["id=telefonnr", "id"],
+        ["css=#telefonnr", "css:finder"],
+        ["xpath=//input[@id='telefonnr']", "xpath:attributes"],
+        ["xpath=//div[7]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "8993b233-32a0-41c8-abb4-a7edbae1f7d2",
+      "comment": "",
+      "command": "click",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "47392eeb-feb5-43a9-8ae1-ba89409e8789",
+      "comment": "",
+      "command": "type",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[8]/input", "xpath:position"]
+      ],
+      "value": "Passord"
+    }, {
+      "id": "1a229f49-b419-40ba-91c8-197ada82addc",
+      "comment": "",
+      "command": "click",
+      "target": "id=regKunde",
+      "targets": [
+        ["id=regKunde", "id"],
+        ["css=#regKunde", "css:finder"],
+        ["xpath=//button[@id='regKunde']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrer kunde')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "66839646-8044-4b91-86f4-c3598bf736cc",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=personnummer3",
+      "targets": [
+        ["id=personnummer3", "id"],
+        ["css=#personnummer3", "css:finder"],
+        ["xpath=//input[@id='personnummer3']", "xpath:attributes"],
+        ["xpath=//div[@id='listKunde']/table/tbody/tr[3]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td/input", "xpath:position"]
+      ],
+      "value": "12345678910"
+    }, {
+      "id": "7b54599e-7b25-45ab-9c19-583d71776bf2",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=fornavn3",
+      "targets": [
+        ["id=fornavn3", "id"],
+        ["css=#fornavn3", "css:finder"],
+        ["xpath=//input[@id='fornavn3']", "xpath:attributes"],
+        ["xpath=//div[@id='listKunde']/table/tbody/tr[3]/td[2]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[2]/input", "xpath:position"]
+      ],
+      "value": "TestFornavn"
+    }, {
+      "id": "a4a1787d-f9ed-4c89-bc9f-1205499dda22",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=etternavn3",
+      "targets": [
+        ["id=etternavn3", "id"],
+        ["css=#etternavn3", "css:finder"],
+        ["xpath=//input[@id='etternavn3']", "xpath:attributes"],
+        ["xpath=//div[@id='listKunde']/table/tbody/tr[3]/td[3]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[3]/input", "xpath:position"]
+      ],
+      "value": "TestEtternavn"
+    }, {
+      "id": "5778e51d-27f3-4614-a592-3e661224e94f",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=adresse3",
+      "targets": [
+        ["id=adresse3", "id"],
+        ["css=#adresse3", "css:finder"],
+        ["xpath=//input[@id='adresse3']", "xpath:attributes"],
+        ["xpath=//div[@id='listKunde']/table/tbody/tr[3]/td[4]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[4]/input", "xpath:position"]
+      ],
+      "value": "TestAdresse"
+    }, {
+      "id": "8b84e8c2-85d8-412c-b677-e2ba1b027e64",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=postnr3",
+      "targets": [
+        ["id=postnr3", "id"],
+        ["css=#postnr3", "css:finder"],
+        ["xpath=//input[@id='postnr3']", "xpath:attributes"],
+        ["xpath=//div[@id='listKunde']/table/tbody/tr[3]/td[5]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[5]/input", "xpath:position"]
+      ],
+      "value": "1234"
+    }, {
+      "id": "b820b7b8-0eca-4bb7-9468-28629502267e",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=poststed3",
+      "targets": [
+        ["id=poststed3", "id"],
+        ["css=#poststed3", "css:finder"],
+        ["xpath=//input[@id='poststed3']", "xpath:attributes"],
+        ["xpath=//div[@id='listKunde']/table/tbody/tr[3]/td[6]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[6]/input", "xpath:position"]
+      ],
+      "value": "TestPoststed"
+    }, {
+      "id": "74e029d8-04cd-487d-9a86-3a3050b42103",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=telefonnr3",
+      "targets": [
+        ["id=telefonnr3", "id"],
+        ["css=#telefonnr3", "css:finder"],
+        ["xpath=//input[@id='telefonnr3']", "xpath:attributes"],
+        ["xpath=//div[@id='listKunde']/table/tbody/tr[3]/td[7]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[7]/input", "xpath:position"]
+      ],
+      "value": "12345678"
+    }, {
+      "id": "97c7f558-aeca-49ac-8e78-560819ca6874",
+      "comment": "",
+      "command": "assertValue",
+      "target": "id=passord3",
+      "targets": [
+        ["id=passord3", "id"],
+        ["css=#passord3", "css:finder"],
+        ["xpath=//input[@id='passord3']", "xpath:attributes"],
+        ["xpath=//div[@id='listKunde']/table/tbody/tr[3]/td[8]/input", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[8]/input", "xpath:position"]
+      ],
+      "value": "Passord"
+    }]
+  }],
+  "suites": [{
+    "id": "7e232ee1-f3d7-4e5c-9b35-c6441b18f3a8",
+    "name": "AdminTest",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }, {
+    "id": "c23b84af-1c9a-4ca9-99ae-6e1303ff8f52",
+    "name": "BankTest",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": []
+  }],
+  "urls": ["http://localhost/", "http://localhost/testingBank/View/utforBetalinger.php", "http://localhost/testingBank/View/registerBetaling.php", "http://localhost/testingBank/View/saldo.php", "http://localhost/testingBank/Index.php"],
+  "plugins": []
+}
