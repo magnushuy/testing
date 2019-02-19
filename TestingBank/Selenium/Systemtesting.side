@@ -670,6 +670,321 @@
       ],
       "value": "Logg inn"
     }]
+  }, {
+    "id": "5488b9fa-d53a-46f8-8234-48ea56f3c337",
+    "name": "hentKundeInfo",
+    "commands": [{
+      "id": "c1bff5f3-6f5f-421d-8b7b-353f330394b0",
+      "comment": "",
+      "command": "open",
+      "target": "/testing/TestingBank/DAL/initDB.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3924be2d-bcfe-4bbb-b71d-e05d35826517",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "96273d47-ab8c-4692-b6a0-887f9c2f19b7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/testingBank/Index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "fa59b9c1-ae2c-455e-b64d-9296f0aa403b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logg inn",
+      "targets": [
+        ["linkText=Logg inn", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Logg inn')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'View/loggInn.php')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logg inn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "31b683ee-825d-43fd-97db-45592bd25630",
+      "comment": "",
+      "command": "click",
+      "target": "id=personNr",
+      "targets": [
+        ["id=personNr", "id"],
+        ["css=#personNr", "css:finder"],
+        ["xpath=//input[@id='personNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9865b741-956d-4cff-93f5-9344ca5cca5d",
+      "comment": "",
+      "command": "mouseDownAt",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "-4,170"
+    }, {
+      "id": "49aafbbd-4416-441c-aeec-606e09d8edae",
+      "comment": "",
+      "command": "mouseMoveAt",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "-4,170"
+    }, {
+      "id": "1df3ad02-1109-44e0-840e-cc3fdad695b2",
+      "comment": "",
+      "command": "mouseUpAt",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": "-4,170"
+    }, {
+      "id": "db0e48e3-9f27-44ed-bb5b-fe1c08ad266d",
+      "comment": "",
+      "command": "type",
+      "target": "id=personNr",
+      "targets": [
+        ["id=personNr", "id"],
+        ["css=#personNr", "css:finder"],
+        ["xpath=//input[@id='personNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "01010110523"
+    }, {
+      "id": "ddb6900c-be77-4597-9dcd-ade6b7e664b1",
+      "comment": "",
+      "command": "click",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0a67acb0-d6ad-4c6a-8454-2da4ac43faee",
+      "comment": "",
+      "command": "type",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "HeiHei"
+    }, {
+      "id": "b6f3a620-f0c2-48e5-82d6-45e71e0fb07a",
+      "comment": "",
+      "command": "click",
+      "target": "id=loggInn",
+      "targets": [
+        ["id=loggInn", "id"],
+        ["css=#loggInn", "css:finder"],
+        ["xpath=//button[@id='loggInn']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logg inn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "5902de7f-09d4-4b16-928f-042b01d7fbb5",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Kunde-info",
+      "targets": [
+        ["linkText=Kunde-info", "linkText"],
+        ["css=li:nth-child(5) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Kunde-info')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li[5]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '../View/kundeInfo.php')]", "xpath:href"],
+        ["xpath=//li[5]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Kunde-info')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b7e66a33-bfdd-4e9a-a87c-3e3f211b2bfc",
+      "comment": "",
+      "command": "assertText",
+      "target": "id=heading",
+      "targets": [
+        ["id=heading", "id"],
+        ["css=#heading", "css:finder"],
+        ["xpath=//div[@id='heading']", "xpath:attributes"],
+        ["xpath=//div[4]/div", "xpath:position"]
+      ],
+      "value": "Kundeinformasjon for personnummer 01010110523"
+    }]
+  }, {
+    "id": "8ab91a11-f9f8-4e3c-a70e-56826264b406",
+    "name": "hentSaldi",
+    "commands": [{
+      "id": "38f4d64d-1089-4fe5-b3d5-38b46de3411f",
+      "comment": "",
+      "command": "open",
+      "target": "/testing/TestingBank/DAL/initDB.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cd9df5fb-7180-4169-ad5d-f9568297c212",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7b83bda8-001b-46a9-97d2-66672d0855f9",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/testingBank/Index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "081a93a7-8aab-4f3f-a910-12dad580537b",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Logg inn",
+      "targets": [
+        ["linkText=Logg inn", "linkText"],
+        ["css=.btn", "css:finder"],
+        ["xpath=//a[contains(text(),'Logg inn')]", "xpath:link"],
+        ["xpath=//a[contains(@href, 'View/loggInn.php')]", "xpath:href"],
+        ["xpath=//div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Logg inn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "dc6e2483-e09c-486e-93b7-ed31a249785e",
+      "comment": "",
+      "command": "click",
+      "target": "id=personNr",
+      "targets": [
+        ["id=personNr", "id"],
+        ["css=#personNr", "css:finder"],
+        ["xpath=//input[@id='personNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "e68b3025-960a-4c55-8a3a-89d130316227",
+      "comment": "",
+      "command": "type",
+      "target": "id=personNr",
+      "targets": [
+        ["id=personNr", "id"],
+        ["css=#personNr", "css:finder"],
+        ["xpath=//input[@id='personNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "01010110523"
+    }, {
+      "id": "718e7255-3d48-4b80-b67b-09fe8a254df7",
+      "comment": "",
+      "command": "type",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "HeiHei"
+    }, {
+      "id": "3ae1b01e-ee65-4621-a8a5-3a4c1c328f0e",
+      "comment": "",
+      "command": "click",
+      "target": "id=loggInn",
+      "targets": [
+        ["id=loggInn", "id"],
+        ["css=#loggInn", "css:finder"],
+        ["xpath=//button[@id='loggInn']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Logg inn')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b3604d5f-dbbb-498a-8b82-1e73bb96dff7",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listSaldi']/table/tbody/tr/td[3]", "xpath:idRelative"],
+        ["xpath=//td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'720')]", "xpath:innerText"]
+      ],
+      "value": "720"
+    }, {
+      "id": "f29444ac-a303-47bc-9abe-2dbfb4689295",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listSaldi']/table/tbody/tr[2]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'100500')]", "xpath:innerText"]
+      ],
+      "value": "100500"
+    }, {
+      "id": "7cc80a0b-9235-4837-8fde-64ddd9a73d0b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(3)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(3)", "css:finder"],
+        ["xpath=//div[@id='listSaldi']/table/tbody/tr[3]/td[3]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[3]", "xpath:position"],
+        ["xpath=//td[contains(.,'10234.5')]", "xpath:innerText"]
+      ],
+      "value": "10234.5"
+    }, {
+      "id": "ce516160-6ad7-4d43-ac2e-d45706b8d49b",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(1) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(1) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listSaldi']/table/tbody/tr/td[4]", "xpath:idRelative"],
+        ["xpath=//td[4]", "xpath:position"],
+        ["xpath=//td[contains(.,'NOK')]", "xpath:innerText"]
+      ],
+      "value": "NOK"
+    }, {
+      "id": "9018e30b-9597-4e8d-86ac-e7b120fbbbe5",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(2) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(2) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listSaldi']/table/tbody/tr[2]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[2]/td[4]", "xpath:position"]
+      ],
+      "value": "NOK"
+    }, {
+      "id": "88fc1c4b-83ca-4db1-9a4d-5c896588effd",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(3) > td:nth-child(4)",
+      "targets": [
+        ["css=tr:nth-child(3) > td:nth-child(4)", "css:finder"],
+        ["xpath=//div[@id='listSaldi']/table/tbody/tr[3]/td[4]", "xpath:idRelative"],
+        ["xpath=//tr[3]/td[4]", "xpath:position"]
+      ],
+      "value": "NOK"
+    }]
   }],
   "suites": [{
     "id": "7e232ee1-f3d7-4e5c-9b35-c6441b18f3a8",
