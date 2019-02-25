@@ -1,0 +1,7 @@
+Integrasjonstesting 
+(Trenger a legge til Soap prosjekt!!!)
+
+adminSlettKonto
+adminSlettKunde
+
+utforBetaling      
