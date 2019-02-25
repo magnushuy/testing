@@ -1,7 +1,13 @@
-Integrasjonstesting 
-(Trenger a legge til Soap prosjekt!!!)
+- Integrasjonstesting 
+  (Trenger a legge til Soap prosjekt!!!)
 
-adminSlettKonto
-adminSlettKunde
+  adminSlettKonto
+  adminSlettKunde
 
-utforBetaling      
+  utforBetaling      
+
+
+
+- Dokumentering i Excel !!!!!!!!!!
+
+- Ma finnes noen feil(noen metoder burde feile, ha rodt utskrift)

@@ -1,7 +1,5 @@
-Integrasjonstesting 
-(Trenger a legge til Soap prosjekt!!!)
+- Dokumentering i Excel/MTM brukerhistorier !!!!!!!!!!
 
-adminSlettKonto
-adminSlettKunde
+- Ma finnes noen feil(noen metoder burde feile, ha rodt utskrift)  
 
-utforBetaling      
+- Skrive slutt rapport    
