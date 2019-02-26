@@ -1,6 +1,0 @@
-Integrasjonstesting og Systemtesting
-
-adminSlettKonto
-adminSlettKunde
-
-utforBetaling      (bare Integrasjonstesting)

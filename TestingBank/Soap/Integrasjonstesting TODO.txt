@@ -1,0 +1,13 @@
+- Integrasjonstesting 
+  (Trenger a legge til Soap prosjekt!!!)
+
+  adminSlettKonto
+  adminSlettKunde
+
+  utforBetaling      
+
+
+
+- Dokumentering i Excel !!!!!!!!!!
+
+- Ma finnes noen feil(noen metoder burde feile, ha rodt utskrift)
