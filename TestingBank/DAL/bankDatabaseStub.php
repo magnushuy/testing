@@ -165,18 +165,21 @@
             
         }
         
-        function hentKundeInfo($personnummer){          
+       
+        
+        function hentKundeInfo($personnummer){
             $kunde = new kunde();
-            if($personnummer == -1 ){
-                return "Feil";                
+            $kunde->personnummer = 21097635882;
+            $kunde->fornavn = "Petter";
+            $kunde->etternavn = "Hansen";
+            $kunde->adresse = "Torgveien 19";
+            $kunde->postnr = "0580";
+            $kunde->telefonnr = "47651298";
+            if($personnummer != $kunde->personnummer){
+                return "Feil";
             }
-            else {
-                $personnummer = 21097635882;      
-                return $personnummer;
-            }
+            else return $kunde;
         }
-        
-        
 
     }
     

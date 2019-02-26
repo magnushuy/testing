@@ -227,7 +227,12 @@
         //Act
         $OK = $bankLogikk->hentKundeInfo($personnummer);
         //Assert
-        $this->assertEquals($personnummer, $OK); 
+        $this->assertEquals($kunde->personnummer, $OK->personnummer); 
+        $this->assertEquals($kunde->fornavn, $OK->fornavn); 
+        $this->assertEquals($kunde->etternavn, $OK->etternavn); 
+        $this->assertEquals($kunde->postnr, $OK->postnr); 
+        $this->assertEquals($kunde->adresse, $OK->adresse); 
+        $this->assertEquals($kunde->telefonnr, $OK->telefonnr); 
     }        
     
     function test_hentKundeInfo_Feil(){
