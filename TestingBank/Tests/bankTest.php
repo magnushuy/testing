@@ -2,7 +2,7 @@
     include_once '../Model/domeneModell.php';
     include_once '../DAL/bankDatabaseStub.php';
     include_once '../BLL/bankLogikk.php';
-    class bankDatabaseTest extends PHPUnit\Framework\TestCase{
+    class bankTest extends PHPUnit\Framework\TestCase{
         
         function test_sjekkLoggInn_OK() {
             //Arrange
