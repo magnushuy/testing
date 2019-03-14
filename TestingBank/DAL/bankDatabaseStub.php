@@ -81,8 +81,7 @@
                 return null;
             }
         }    
-
-
+        
         //Funksjonen sjekker om personnumemer og passord stemmer              
         function sjekkLoggInn($personnumer, $passord){
             if($personnumer == "21107698233" && $passord == "Petter1212"){
@@ -94,9 +93,6 @@
         }
 
     
-        
-
-        
         function registrerBetaling($kontoNr, $transaksjon){
             if($transaksjon->fraTilKontonummer == 123 &&
                     $transaksjon->belop == 500 &&
@@ -143,9 +139,7 @@
          return "Feil";
             
         }
-        
-       
-        
+             
         function hentKundeInfo($personnummer){
             $kunde = new kunde();
             $kunde->personnummer = 21097635882;
@@ -160,9 +154,7 @@
             else return $kunde;
         }
 
-    }
-    
-    
+    }   
 ?>
 
         
