@@ -99,7 +99,7 @@
         
     }
     
-    function registerKonto($konto){
+    function registrerKonto($konto){
         if($konto->kontonummer == -1){
             return "Feil";
         }

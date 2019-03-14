@@ -150,7 +150,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
     }
 
     //Funksjon som gir godkjentmelding når man tester om å registrere konto.
-    function test_registerKonto_OK(){
+    function test_registrerKonto_OK(){
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
         $konto = new konto();
@@ -169,7 +169,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
     }
 
     //Funksjon som gir feilmelding når man tester om å registrere konto.    
-    function test_registerKonto_Feil() {
+    function test_registrerKonto_Feil() {
 
         //Forandrer verdier slik at testen blir feil
         $adminLogikk = new Admin(new adminDatabaseStub());
