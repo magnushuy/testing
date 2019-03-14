@@ -109,17 +109,20 @@
     }
     
     function endreKonto($konto){
-        if($konto->kontonummer == 12345 && $konto->personnummer == 54321){
-            return "OK";
+        if($konto->kontonummer != 12345){
+            return "Feil kontonummer";
+        }
+        else if($konto->personnummer != 54321){
+            return "Feil personnummer";
         }
         else{
-            return "Feil";
+            return "OK";
         }
     }
     
     function slettKonto($kontonummer){
         if($kontonummer == -1){
-            return "Feil";
+            return "Feil kontonummer";
         }
         else{
             return "OK";

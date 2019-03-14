@@ -89,18 +89,28 @@
         } 
         
         function hentKonti($personnummer){
-            if($personnummer == 1234567890){
-                return "OK";
+            $konti = new konto();
+            $konti->personnummer = 1234567890;
+            $konti->saldo = 100;
+            if($personnummer == $konti->personnummer){
+                return $konti;
             }
-            return "Feil";
+            else{
+                return null;
+            }
         }
 
         
         function hentSaldi($personnummer) {
-            if($personnummer == 1234567890){
-                return "OK";
+            $konto = new konto();
+            $konto->personnummer = 1234567890;
+            $konto->saldo = 500;
+            if($personnummer == $konto->personnummer){
+                return $konto->saldo;
             }
-            return "Feil";
+            else{
+                return null;
+            }
         }    
 
 

@@ -204,20 +204,36 @@ class adminTest extends PHPUnit\Framework\TestCase{
     }
     
      //Funksjon som gir feilmelding når man tester om å endrer konto.    
-    function test_endreKonto_Feil(){
+    function test_endreKonto_FeilPersonnummer(){
         //Arrange
         $adminLogikk = new Admin(new adminDatabaseStub());
         $konto = new konto();
        
-        $konto->kontonummer = -12345;
-        $konto->personnummer = -54321;
+        $konto->kontonummer = 12345;
+        $konto->personnummer = 54320;
         $konto->saldo = 100000;
         $konto->type = "Sparekonto";
         $konto->valuta = "NOK";
         //Act
         $Feil = $adminLogikk->endreKonto($konto);
         //Assert
-        $this->assertEquals("Feil", $Feil);
+        $this->assertEquals("Feil personnummer", $Feil);
+    }
+    
+    function test_endreKonto_FeilKontonummer(){
+        //Arrange
+        $adminLogikk = new Admin(new adminDatabaseStub());
+        $konto = new konto();
+       
+        $konto->kontonummer = 12340;
+        $konto->personnummer = 54321;
+        $konto->saldo = 100000;
+        $konto->type = "Sparekonto";
+        $konto->valuta = "NOK";
+        //Act
+        $Feil = $adminLogikk->endreKonto($konto);
+        //Assert
+        $this->assertEquals("Feil kontonummer", $Feil);
     }
     
     //Funksjon som gir godkjentmelding når man tester om å slette konto.
@@ -241,7 +257,7 @@ class adminTest extends PHPUnit\Framework\TestCase{
         //Act
         $result = $adminLogikk->slettKonto($konto->kontonummer);
         //Assert
-        $this->assertEquals("Feil", $result);
+        $this->assertEquals("Feil kontonummer", $result);
     }
 
 
