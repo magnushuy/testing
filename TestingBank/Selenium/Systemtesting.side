@@ -5797,337 +5797,6 @@
       "value": "3270"
     }]
   }, {
-    "id": "233237a9-41bd-4647-9aba-2f152bffeca6",
-    "name": "adminRegistrerKunde - Feil",
-    "commands": [{
-      "id": "79945892-6776-4df5-a00a-0d6e2c5caa3a",
-      "comment": "",
-      "command": "open",
-      "target": "/testing/TestingBank/DAL/initDB.php",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "3f5d7fdc-e00b-4c7b-825d-e70aa34e407d",
-      "comment": "",
-      "command": "pause",
-      "target": "1000",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "625bd621-ae2b-4254-887e-bc9ceb85e6f2",
-      "comment": "",
-      "command": "open",
-      "target": "http://localhost/TestingBank/Index.php",
-      "targets": [],
-      "value": ""
-    }, {
-      "id": "b24eccd8-8178-489b-ad4d-53ffb4cd595b",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Admin",
-      "targets": [
-        ["linkText=Admin", "linkText"],
-        ["css=li > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Admin')]", "xpath:link"],
-        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, '/TestingBank/View/loggInnAdmin.php')]", "xpath:href"],
-        ["xpath=//li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Admin')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "f0493366-3a47-4e0d-a89d-bdab286a046f",
-      "comment": "",
-      "command": "click",
-      "target": "id=bruker",
-      "targets": [
-        ["id=bruker", "id"],
-        ["css=#bruker", "css:finder"],
-        ["xpath=//input[@id='bruker']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "f875a9b5-ea4b-4e54-8a30-c4fd9c4321af",
-      "comment": "",
-      "command": "type",
-      "target": "id=bruker",
-      "targets": [
-        ["id=bruker", "id"],
-        ["css=#bruker", "css:finder"],
-        ["xpath=//input[@id='bruker']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "Admin"
-    }, {
-      "id": "a24911d9-648c-4a7a-b1e7-2aefb1b644eb",
-      "comment": "",
-      "command": "click",
-      "target": "id=passord",
-      "targets": [
-        ["id=passord", "id"],
-        ["css=#passord", "css:finder"],
-        ["xpath=//input[@id='passord']", "xpath:attributes"],
-        ["xpath=//div[2]/div/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "a14980d6-e726-41ae-81ca-a033c5fe1ab3",
-      "comment": "",
-      "command": "type",
-      "target": "id=passord",
-      "targets": [
-        ["id=passord", "id"],
-        ["css=#passord", "css:finder"],
-        ["xpath=//input[@id='passord']", "xpath:attributes"],
-        ["xpath=//div[2]/div/input", "xpath:position"]
-      ],
-      "value": "Admin"
-    }, {
-      "id": "d7c9c00b-4ef6-4efe-8f01-b5cfa124cfc7",
-      "comment": "",
-      "command": "click",
-      "target": "id=loggInn",
-      "targets": [
-        ["id=loggInn", "id"],
-        ["css=#loggInn", "css:finder"],
-        ["xpath=//input[@id='loggInn']", "xpath:attributes"],
-        ["xpath=//form/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "bc0ebf7f-8b71-4aa7-90d9-904cf28d7539",
-      "comment": "",
-      "command": "click",
-      "target": "linkText=Registrer kunde",
-      "targets": [
-        ["linkText=Registrer kunde", "linkText"],
-        ["css=.nav:nth-child(1) > li:nth-child(1) > a", "css:finder"],
-        ["xpath=//a[contains(text(),'Registrer kunde')]", "xpath:link"],
-        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
-        ["xpath=//a[contains(@href, 'adminRegisterKunde.php')]", "xpath:href"],
-        ["xpath=//li/a", "xpath:position"],
-        ["xpath=//a[contains(.,'Registrer kunde')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "d9f36027-b987-4ed1-8a86-1c93df3339d7",
-      "comment": "",
-      "command": "click",
-      "target": "id=personnummer",
-      "targets": [
-        ["id=personnummer", "id"],
-        ["css=#personnummer", "css:finder"],
-        ["xpath=//input[@id='personnummer']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "6afd586f-8300-4f44-927c-2b8595ef1f55",
-      "comment": "",
-      "command": "type",
-      "target": "id=personnummer",
-      "targets": [
-        ["id=personnummer", "id"],
-        ["css=#personnummer", "css:finder"],
-        ["xpath=//input[@id='personnummer']", "xpath:attributes"],
-        ["xpath=//input", "xpath:position"]
-      ],
-      "value": "12345678910"
-    }, {
-      "id": "58a84fc5-0650-4d7d-8af5-e345be315730",
-      "comment": "",
-      "command": "click",
-      "target": "id=fornavn",
-      "targets": [
-        ["id=fornavn", "id"],
-        ["css=#fornavn", "css:finder"],
-        ["xpath=//input[@id='fornavn']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "37e89177-30bd-4df4-924e-495f62755e5b",
-      "comment": "",
-      "command": "type",
-      "target": "id=fornavn",
-      "targets": [
-        ["id=fornavn", "id"],
-        ["css=#fornavn", "css:finder"],
-        ["xpath=//input[@id='fornavn']", "xpath:attributes"],
-        ["xpath=//div[2]/input", "xpath:position"]
-      ],
-      "value": "TestFornavn"
-    }, {
-      "id": "4a0dda0f-9fc5-4487-a7ea-9ee4b500d473",
-      "comment": "",
-      "command": "click",
-      "target": "id=etternavn",
-      "targets": [
-        ["id=etternavn", "id"],
-        ["css=#etternavn", "css:finder"],
-        ["xpath=//input[@id='etternavn']", "xpath:attributes"],
-        ["xpath=//div[3]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "e7ff92eb-1e81-45d0-929a-8f89d6a21b93",
-      "comment": "",
-      "command": "type",
-      "target": "id=etternavn",
-      "targets": [
-        ["id=etternavn", "id"],
-        ["css=#etternavn", "css:finder"],
-        ["xpath=//input[@id='etternavn']", "xpath:attributes"],
-        ["xpath=//div[3]/input", "xpath:position"]
-      ],
-      "value": "TestEtternavn"
-    }, {
-      "id": "a02c73d1-c020-48d1-abfe-2ada138ea1c0",
-      "comment": "",
-      "command": "click",
-      "target": "id=adresse",
-      "targets": [
-        ["id=adresse", "id"],
-        ["css=#adresse", "css:finder"],
-        ["xpath=//input[@id='adresse']", "xpath:attributes"],
-        ["xpath=//div[4]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "7a3d0545-66f0-4920-8b15-9fe0a47c12f2",
-      "comment": "",
-      "command": "type",
-      "target": "id=adresse",
-      "targets": [
-        ["id=adresse", "id"],
-        ["css=#adresse", "css:finder"],
-        ["xpath=//input[@id='adresse']", "xpath:attributes"],
-        ["xpath=//div[4]/input", "xpath:position"]
-      ],
-      "value": "TestAdresse"
-    }, {
-      "id": "84e181b7-1465-41b6-ac10-9c1734f34595",
-      "comment": "",
-      "command": "click",
-      "target": "id=poststed",
-      "targets": [
-        ["id=poststed", "id"],
-        ["css=#poststed", "css:finder"],
-        ["xpath=//input[@id='poststed']", "xpath:attributes"],
-        ["xpath=//div[6]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c5edda96-4e1b-4809-9856-3ce8c8fb5c0a",
-      "comment": "",
-      "command": "type",
-      "target": "id=postnr",
-      "targets": [
-        ["id=postnr", "id"],
-        ["css=#postnr", "css:finder"],
-        ["xpath=//input[@id='postnr']", "xpath:attributes"],
-        ["xpath=//div[5]/input", "xpath:position"]
-      ],
-      "value": "1234"
-    }, {
-      "id": "7313b46c-b397-4946-89af-14a25b6c9fa5",
-      "comment": "",
-      "command": "click",
-      "target": "id=poststed",
-      "targets": [
-        ["id=poststed", "id"],
-        ["css=#poststed", "css:finder"],
-        ["xpath=//input[@id='poststed']", "xpath:attributes"],
-        ["xpath=//div[6]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "5e14140c-7383-4c1d-83a3-4c0d6df32f75",
-      "comment": "",
-      "command": "type",
-      "target": "id=poststed",
-      "targets": [
-        ["id=poststed", "id"],
-        ["css=#poststed", "css:finder"],
-        ["xpath=//input[@id='poststed']", "xpath:attributes"],
-        ["xpath=//div[6]/input", "xpath:position"]
-      ],
-      "value": "TestPoststed"
-    }, {
-      "id": "fa12f07f-5764-4428-bbd2-6dbfa15b2386",
-      "comment": "",
-      "command": "click",
-      "target": "id=passord",
-      "targets": [
-        ["id=passord", "id"],
-        ["css=#passord", "css:finder"],
-        ["xpath=//input[@id='passord']", "xpath:attributes"],
-        ["xpath=//div[8]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "c30d4922-c584-4ec0-bad2-39eef4a5a06b",
-      "comment": "",
-      "command": "type",
-      "target": "id=telefonnr",
-      "targets": [
-        ["id=telefonnr", "id"],
-        ["css=#telefonnr", "css:finder"],
-        ["xpath=//input[@id='telefonnr']", "xpath:attributes"],
-        ["xpath=//div[7]/input", "xpath:position"]
-      ],
-      "value": "12345678"
-    }, {
-      "id": "5733170d-3d14-41d6-9198-1a04520c5a93",
-      "comment": "",
-      "command": "click",
-      "target": "id=passord",
-      "targets": [
-        ["id=passord", "id"],
-        ["css=#passord", "css:finder"],
-        ["xpath=//input[@id='passord']", "xpath:attributes"],
-        ["xpath=//div[8]/input", "xpath:position"]
-      ],
-      "value": ""
-    }, {
-      "id": "a0e0b66c-5c88-4640-9954-2473cc4bf1f0",
-      "comment": "",
-      "command": "type",
-      "target": "id=passord",
-      "targets": [
-        ["id=passord", "id"],
-        ["css=#passord", "css:finder"],
-        ["xpath=//input[@id='passord']", "xpath:attributes"],
-        ["xpath=//div[8]/input", "xpath:position"]
-      ],
-      "value": "Passord"
-    }, {
-      "id": "99b95228-409d-476a-ae0c-f6843dc6a578",
-      "comment": "",
-      "command": "click",
-      "target": "id=regKunde",
-      "targets": [
-        ["id=regKunde", "id"],
-        ["css=#regKunde", "css:finder"],
-        ["xpath=//button[@id='regKunde']", "xpath:attributes"],
-        ["xpath=//div[2]/button", "xpath:position"],
-        ["xpath=//button[contains(.,'Registrer kunde')]", "xpath:innerText"]
-      ],
-      "value": ""
-    }, {
-      "id": "8e185be5-b072-4560-aee9-0a1708819903",
-      "comment": "",
-      "command": "assertElementNotPresent",
-      "target": "css=tr:nth-child(3) > td:nth-child(1)",
-      "targets": [
-        ["css=tr:nth-child(3) > td:nth-child(1)", "css:finder"],
-        ["xpath=//div[@id='listKunde']/table/tbody/tr[3]/td", "xpath:idRelative"],
-        ["xpath=//tr[3]/td", "xpath:position"]
-      ],
-      "value": ""
-    }]
-  }, {
     "id": "796bb6ce-1784-4280-ab3d-9d3bd5ab64eb",
     "name": "endreKundeInfo - Feil",
     "commands": [{
@@ -6816,6 +6485,157 @@
         ["xpath=//input[@id='kontonummer4']", "xpath:attributes"],
         ["xpath=//div[@id='endreKonto']/table/tbody/tr[4]/td/input", "xpath:idRelative"],
         ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "42e58928-c485-486c-b9fe-9bd474b52393",
+    "name": "adminRegistrerKunde - Feil",
+    "commands": [{
+      "id": "278d4bdf-b3d2-44b0-9b46-bda8d33fb0a4",
+      "comment": "",
+      "command": "open",
+      "target": "/testing/TestingBank/DAL/initDB.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "c0e4a631-b540-4f09-9983-d2734387d9f6",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "e7d122f2-00aa-499b-be63-5669f3755b87",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/TestingBank/Index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ecd2fc8-e7a6-4b0e-a47b-607b18a79a55",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Admin",
+      "targets": [
+        ["linkText=Admin", "linkText"],
+        ["css=li > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Admin')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/TestingBank/View/loggInnAdmin.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Admin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "c0502897-c5d9-4d7d-943b-3393838bc90c",
+      "comment": "",
+      "command": "click",
+      "target": "id=bruker",
+      "targets": [
+        ["id=bruker", "id"],
+        ["css=#bruker", "css:finder"],
+        ["xpath=//input[@id='bruker']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "10c59b0a-5934-4414-85ec-2cbed4f393d6",
+      "comment": "",
+      "command": "type",
+      "target": "id=bruker",
+      "targets": [
+        ["id=bruker", "id"],
+        ["css=#bruker", "css:finder"],
+        ["xpath=//input[@id='bruker']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Admin"
+    }, {
+      "id": "ac83f36b-df32-484a-8534-546372b158c6",
+      "comment": "",
+      "command": "click",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "275125c7-dd56-464d-bc61-e447845f32a5",
+      "comment": "",
+      "command": "type",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Admin"
+    }, {
+      "id": "6e178541-929d-427d-8780-ad558547d5bd",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(2)", "css:finder"],
+        ["xpath=//form/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7de883bc-401d-400c-9c4b-d8bee98c1ed6",
+      "comment": "",
+      "command": "click",
+      "target": "id=loggInn",
+      "targets": [
+        ["id=loggInn", "id"],
+        ["css=#loggInn", "css:finder"],
+        ["xpath=//input[@id='loggInn']", "xpath:attributes"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "03d26a70-4aef-48fc-9a4f-f8436d0e0724",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Registrer kunde",
+      "targets": [
+        ["linkText=Registrer kunde", "linkText"],
+        ["css=.nav:nth-child(1) > li:nth-child(1) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Registrer kunde')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'adminRegisterKunde.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Registrer kunde')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "b5588ab5-7d24-4d1a-9b8d-45a5f0f0cec0",
+      "comment": "",
+      "command": "click",
+      "target": "id=regKunde",
+      "targets": [
+        ["id=regKunde", "id"],
+        ["css=#regKunde", "css:finder"],
+        ["xpath=//button[@id='regKunde']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrer kunde')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a7e36506-73c7-4f3d-8874-47ed7f8b1d79",
+      "comment": "",
+      "command": "assertElementNotPresent",
+      "target": "id=personnummer1",
+      "targets": [
+        ["id=personnummer1", "id"],
+        ["css=#personnummer1", "css:finder"],
+        ["xpath=//input[@id='personnummer1']", "xpath:attributes"],
+        ["xpath=//div[@id='listKunde']/table/tbody/tr/td/input", "xpath:idRelative"],
+        ["xpath=//input", "xpath:position"]
       ],
       "value": ""
     }]
