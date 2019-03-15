@@ -6808,7 +6808,7 @@
     }, {
       "id": "6149920e-8e0f-4c0e-a24d-96b0f8cce53f",
       "comment": "Personnummer mer enn 9 siffer",
-      "command": "assertNotChecked",
+      "command": "assertElementNotPresent",
       "target": "id=kontonummer4",
       "targets": [
         ["id=kontonummer4", "id"],
