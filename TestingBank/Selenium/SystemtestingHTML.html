@@ -6547,6 +6547,278 @@
       ],
       "value": ""
     }]
+  }, {
+    "id": "f9243670-6174-4966-8728-910534625159",
+    "name": "adminRegistrerKonto - Feil",
+    "commands": [{
+      "id": "a67a5680-a1e2-46b0-906f-530e809510cf",
+      "comment": "",
+      "command": "open",
+      "target": "/testing/TestingBank/DAL/initDB.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4b87445f-f0ad-4ab8-9e15-01dc2207327a",
+      "comment": "",
+      "command": "pause",
+      "target": "1000",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "8d50174b-ef0e-4ea6-9086-4b76d3ce7b9b",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/TestingBank/Index.php",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "2ecf5bf0-8d02-4930-8711-ecac055e8011",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Admin",
+      "targets": [
+        ["linkText=Admin", "linkText"],
+        ["css=li > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Admin')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, '/TestingBank/View/loggInnAdmin.php')]", "xpath:href"],
+        ["xpath=//li/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Admin')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "69824b3a-0ae6-4a4b-89ec-cdf8b962fd54",
+      "comment": "",
+      "command": "click",
+      "target": "id=bruker",
+      "targets": [
+        ["id=bruker", "id"],
+        ["css=#bruker", "css:finder"],
+        ["xpath=//input[@id='bruker']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "bdff945f-d5aa-4749-96f2-319b4c9ecd80",
+      "comment": "",
+      "command": "type",
+      "target": "id=bruker",
+      "targets": [
+        ["id=bruker", "id"],
+        ["css=#bruker", "css:finder"],
+        ["xpath=//input[@id='bruker']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Admin"
+    }, {
+      "id": "02c901d7-4c8b-45cd-9c20-d8d9d3868170",
+      "comment": "",
+      "command": "click",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a12c90b5-2ad6-4838-a3e8-f11774fdf2d7",
+      "comment": "",
+      "command": "type",
+      "target": "id=passord",
+      "targets": [
+        ["id=passord", "id"],
+        ["css=#passord", "css:finder"],
+        ["xpath=//input[@id='passord']", "xpath:attributes"],
+        ["xpath=//div[2]/div/input", "xpath:position"]
+      ],
+      "value": "Admin"
+    }, {
+      "id": "abef8ff5-be33-4187-8fb1-4c2bf3da2db4",
+      "comment": "",
+      "command": "click",
+      "target": "css=.row:nth-child(2)",
+      "targets": [
+        ["css=.row:nth-child(2)", "css:finder"],
+        ["xpath=//form/div[2]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5ed15147-e7aa-4190-8bf8-ccd28d8de446",
+      "comment": "",
+      "command": "click",
+      "target": "id=loggInn",
+      "targets": [
+        ["id=loggInn", "id"],
+        ["css=#loggInn", "css:finder"],
+        ["xpath=//input[@id='loggInn']", "xpath:attributes"],
+        ["xpath=//form/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b8537c47-2370-449d-bd7b-4e9b0a50e663",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Register konto",
+      "targets": [
+        ["linkText=Register konto", "linkText"],
+        ["css=li:nth-child(3) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Register konto')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li[3]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'adminRegisterKonto.php')]", "xpath:href"],
+        ["xpath=//li[3]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Register konto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "fa03bf07-a4e4-4ccf-bfd6-6b4c5e8f0359",
+      "comment": "",
+      "command": "click",
+      "target": "id=kontoNr",
+      "targets": [
+        ["id=kontoNr", "id"],
+        ["css=#kontoNr", "css:finder"],
+        ["xpath=//input[@id='kontoNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "627c4610-ef0f-4226-8277-0870a5c3caff",
+      "comment": "",
+      "command": "type",
+      "target": "id=kontoNr",
+      "targets": [
+        ["id=kontoNr", "id"],
+        ["css=#kontoNr", "css:finder"],
+        ["xpath=//input[@id='kontoNr']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "786897907098877879"
+    }, {
+      "id": "c2efbe03-9e68-4e98-8e2d-2ae22ac5b49c",
+      "comment": "",
+      "command": "click",
+      "target": "id=valuta",
+      "targets": [
+        ["id=valuta", "id"],
+        ["css=#valuta", "css:finder"],
+        ["xpath=//input[@id='valuta']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "640bd024-5c81-43f1-afd7-08a4883b7ce6",
+      "comment": "",
+      "command": "type",
+      "target": "id=valuta",
+      "targets": [
+        ["id=valuta", "id"],
+        ["css=#valuta", "css:finder"],
+        ["xpath=//input[@id='valuta']", "xpath:attributes"],
+        ["xpath=//div[3]/input", "xpath:position"]
+      ],
+      "value": "AUD"
+    }, {
+      "id": "0e1ac82c-1c04-4ac4-9ae3-18e8aa8d654c",
+      "comment": "",
+      "command": "click",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["css=#type", "css:finder"],
+        ["xpath=//input[@id='type']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "62a6fc81-a260-43ad-a733-e4d84cfb3397",
+      "comment": "",
+      "command": "type",
+      "target": "id=type",
+      "targets": [
+        ["id=type", "id"],
+        ["css=#type", "css:finder"],
+        ["xpath=//input[@id='type']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "BSU"
+    }, {
+      "id": "3ee2b350-51d7-4dee-8335-bcca6a4797e3",
+      "comment": "",
+      "command": "click",
+      "target": "id=personnummer",
+      "targets": [
+        ["id=personnummer", "id"],
+        ["css=#personnummer", "css:finder"],
+        ["xpath=//input[@id='personnummer']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "b0c8d43c-30d9-4166-bdeb-9c66308c0c73",
+      "comment": "",
+      "command": "type",
+      "target": "id=personnummer",
+      "targets": [
+        ["id=personnummer", "id"],
+        ["css=#personnummer", "css:finder"],
+        ["xpath=//input[@id='personnummer']", "xpath:attributes"],
+        ["xpath=//div[4]/input", "xpath:position"]
+      ],
+      "value": "01010110523"
+    }, {
+      "id": "fcd9bcf7-bf38-4b31-a6ff-d4b3be194b77",
+      "comment": "",
+      "command": "click",
+      "target": "css=html",
+      "targets": [
+        ["css=html", "css:finder"],
+        ["xpath=//html", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "9210f71f-9799-4f91-bcf0-c10bf6177730",
+      "comment": "",
+      "command": "click",
+      "target": "id=regKonto",
+      "targets": [
+        ["id=regKonto", "id"],
+        ["css=#regKonto", "css:finder"],
+        ["xpath=//button[@id='regKonto']", "xpath:attributes"],
+        ["xpath=//div[2]/button", "xpath:position"],
+        ["xpath=//button[contains(.,'Registrer konto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "db7953e3-ccc5-4eb9-b0b7-d10d3f417087",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Endre konto",
+      "targets": [
+        ["linkText=Endre konto", "linkText"],
+        ["css=li:nth-child(4) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Endre konto')]", "xpath:link"],
+        ["xpath=//div[@id='navbar-main']/ul/li[4]/a", "xpath:idRelative"],
+        ["xpath=//a[contains(@href, 'adminEndreKonto.php')]", "xpath:href"],
+        ["xpath=//li[4]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Endre konto')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "6149920e-8e0f-4c0e-a24d-96b0f8cce53f",
+      "comment": "Personnummer mer enn 9 siffer",
+      "command": "assertElementNotPresent",
+      "target": "id=kontonummer4",
+      "targets": [
+        ["id=kontonummer4", "id"],
+        ["css=#kontonummer4", "css:finder"],
+        ["xpath=//input[@id='kontonummer4']", "xpath:attributes"],
+        ["xpath=//div[@id='endreKonto']/table/tbody/tr[4]/td/input", "xpath:idRelative"],
+        ["xpath=//tr[4]/td/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
   }],
   "suites": [{
     "id": "7e232ee1-f3d7-4e5c-9b35-c6441b18f3a8",
